@@ -1,0 +1,57 @@
+{
+  "last_updated": "2026-09-13T13:08:18.439603+00:00",
+  "total_jobs": 3,
+  "sources": [
+    "wwr",
+    "remoteok"
+  ],
+  "jobs": [
+    {
+      "id": "wwr--8035073511848955073",
+      "source": "wwr",
+      "title": "AEM Developer",
+      "company": "Vonage",
+      "url": "https://weworkremotely.com/remote-jobs/vonage-aem-developer",
+      "location": "Remote",
+      "tags": [],
+      "description": "Headquarters:  Remote\n \n\n   Join Vonage and help us innovate cloud communications for businesses worldwide!     Why this role matters:  \n We are seeking an experienced and technically skilled Senior AEM Developer to join our digital engineering team. In this role, you will lead the design, developme",
+      "posted_at": "Sat, 05 Sep 2026 07:31:22 +0000",
+      "scraped_at": "2026-09-13T13:08:16.779759+00:00"
+    },
+    {
+      "id": "remoteok-1137194",
+      "source": "remoteok",
+      "title": "Renewables Project Scheduler",
+      "company": "Transportation Partners &amp; Logistics",
+      "url": "https://remoteOK.com/remote-jobs/remote-renewables-project-scheduler-transportation-partners-amp-logistics-1137194",
+      "location": "Black Bess, ",
+      "tags": [
+        "sys admin",
+        "technical",
+        "customer support",
+        "testing",
+        "travel",
+        "microsoft",
+        "exec",
+        "excel",
+        "stats",
+        "engineer"
+      ],
+      "description": "Apply<br><br><strong>Description<br><br></strong><strong>Job Summary:<br><br></strong>The BESS Project Scheduler is responsible for developing, maintaining, and analyzing detailed project schedules for Battery Energy Storage System (BESS) projects. This role plays a critical part in ensuring projects are delivered on time by providing accurate schedule forecasts, identifying risks, and supporting project teams with data-driven insights across engineering, procurement, construction, commissioning",
+      "posted_at": "2026-08-25T21:34:13+00:00",
+      "scraped_at": "2026-09-13T13:08:12.872555+00:00"
+    },
+    {
+      "id": "remoteok-1136370",
+      "source": "remoteok",
+      "title": "Functional Assessor",
+      "company": "PFAS (Personal Functional Assessment Services)",
+      "url": "https://remoteOK.com/remote-jobs/remote-functional-assessor-pfas-personal-functional-assessment-services-1136370",
+      "location": "Bury St Edmunds, ",
+      "tags": [],
+      "description": "&lt;img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA6wAAAB+CAYAAAAgJZz9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFxEAABcRAcom8z8AAP+lSURBVHhe7L11YBVnvv9///197927vt3dbpXibiHu7u7u7u7uTkgCSQjuTine4u4WYgR3dyvv3+fznHMgpIFCC5Tde6Z9M3NmnjPznJnJzLzmY//VYVWH4xY171dWE9Du3oR2t8bel8v1m6jFbDyOm9M0q5flcr2dWs0noM20FgdtyrEoNB7Z5XYIb9JHyFRdhE7RQ3iFHhIiDJHhY4q8AGvkBtki2dMU0U56QvGuBkj1MkWWnwXSvM0Q6WiAQBtdBNnoIdLZGIkeprTcjL5jjDhnA4Tb6pB0Ee1oiFhnI4TZ6SPAUhP+FhrwNVeHq4EyXA2VEe6gh/wQe5RFOSONvh9FnyMd9",
+      "posted_at": "2026-08-03T13:21:42+00:00",
+      "scraped_at": "2026-09-13T13:08:12.878756+00:00"
+    }
+  ]
+}

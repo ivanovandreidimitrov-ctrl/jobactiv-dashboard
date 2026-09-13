@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="it">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>JobActiv v1.0 — Andrei Ivanov</title>
+<title>JobActiv v2.0 â€” Andrei Ivanov</title>
 <style>
   :root {
     --bg: #0a1628;
@@ -12,345 +12,94 @@
     --text: #e8e8e8;
     --muted: #8fa3bd;
     --card-border: #1f3a5f;
+    --green: #2ecc71;
+    --yellow: #ffc107;
+    --red: #e74c3c;
+    --blue: #3498db;
   }
-
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-
-  body {
-    background: var(--bg);
-    color: var(--text);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    line-height: 1.6;
-    min-height: 100vh;
-  }
-
-  /* ===== HEADER ===== */
-  header {
-    background: linear-gradient(135deg, #0d1f38 0%, #142844 100%);
-    border-bottom: 2px solid var(--accent);
-    padding: 20px 32px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 12px;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-  }
-
-  .brand {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-  }
-
-  .brand-logo {
-    width: 42px;
-    height: 42px;
-    background: var(--accent);
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 800;
-    font-size: 20px;
-    color: #0a1628;
-  }
-
-  .brand h1 {
-    font-size: 22px;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-  }
-
-  .brand h1 span { color: var(--accent); }
-
-  .brand .version {
-    font-size: 12px;
-    color: var(--muted);
-    font-weight: 600;
-    background: rgba(255, 107, 53, 0.12);
-    padding: 3px 10px;
-    border-radius: 20px;
-    border: 1px solid rgba(255, 107, 53, 0.3);
-  }
-
-  .header-nav {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-  }
-
-  .header-nav a {
-    color: var(--muted);
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 600;
-    padding: 8px 16px;
-    border-radius: 8px;
-    transition: all 0.2s;
-  }
-
-  .header-nav a:hover, .header-nav a.active {
-    color: var(--accent);
-    background: rgba(255, 107, 53, 0.1);
-  }
-
-  /* ===== LAYOUT ===== */
-  main {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 32px 24px 64px;
-  }
-
-  section { margin-bottom: 48px; }
-
-  .section-title {
-    font-size: 20px;
-    font-weight: 700;
-    margin-bottom: 20px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .section-title::before {
-    content: "";
-    width: 4px;
-    height: 22px;
-    background: var(--accent);
-    border-radius: 2px;
-    display: inline-block;
-  }
-
-  /* ===== JOBS ===== */
-  .jobs-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-  }
-
-  .job-card {
-    background: var(--card);
-    border: 1px solid var(--card-border);
-    border-radius: 14px;
-    padding: 22px;
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-    transition: transform 0.2s, border-color 0.2s;
-  }
-
-  .job-card:hover {
-    transform: translateY(-3px);
-    border-color: var(--accent);
-  }
-
-  .job-card-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .job-card h3 {
-    font-size: 17px;
-    font-weight: 700;
-  }
-
-  .job-badge {
-    font-size: 11px;
-    font-weight: 700;
-    padding: 4px 10px;
-    border-radius: 20px;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-  }
-
-  .badge-waiting {
-    background: rgba(255, 193, 7, 0.15);
-    color: #ffc107;
-    border: 1px solid rgba(255, 193, 7, 0.3);
-  }
-
-  .badge-live {
-    background: rgba(46, 204, 113, 0.15);
-    color: #2ecc71;
-    border: 1px solid rgba(46, 204, 113, 0.3);
-  }
-
-  .job-count {
-    font-size: 32px;
-    font-weight: 800;
-    color: var(--accent);
-  }
-
-  .job-placeholder {
-    color: var(--muted);
-    font-size: 14px;
-    font-style: italic;
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 20px 0;
-    border: 1px dashed var(--card-border);
-    border-radius: 10px;
-  }
-
-  .btn-refresh {
-    background: var(--accent);
-    color: #0a1628;
-    border: none;
-    padding: 10px 18px;
-    border-radius: 8px;
-    font-weight: 700;
-    font-size: 14px;
-    cursor: pointer;
-    transition: opacity 0.2s;
-  }
-
-  .btn-refresh:hover { opacity: 0.85; }
-  .btn-refresh:disabled { opacity: 0.5; cursor: not-allowed; }
-
-  .job-meta {
-    font-size: 12px;
-    color: var(--muted);
-  }
-
-  /* ===== CV ===== */
-  .cv-actions {
-    display: flex;
-    justify-content: flex-end;
-    margin-bottom: 16px;
-  }
-
-  .btn-print {
-    background: var(--accent);
-    color: #0a1628;
-    border: none;
-    padding: 10px 22px;
-    border-radius: 8px;
-    font-weight: 700;
-    font-size: 14px;
-    cursor: pointer;
-    transition: opacity 0.2s;
-  }
-
-  .btn-print:hover { opacity: 0.85; }
-
-  .cv-doc {
-    background: #ffffff;
-    color: #1a1a2e;
-    border-radius: 14px;
-    padding: 48px 56px;
-    max-width: 850px;
-    margin: 0 auto;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
-  }
-
-  .cv-doc h1 {
-    font-size: 26px;
-    color: #0a1628;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    border-bottom: 3px solid var(--accent);
-    padding-bottom: 8px;
-    margin-bottom: 4px;
-  }
-
-  .cv-contact {
-    color: #555;
-    font-size: 14px;
-    margin-bottom: 24px;
-  }
-
-  .cv-doc h2 {
-    font-size: 16px;
-    color: var(--accent);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin: 28px 0 10px;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 4px;
-  }
-
-  .cv-doc h3 {
-    font-size: 15px;
-    color: #0a1628;
-    margin: 18px 0 2px;
-  }
-
-  .cv-doc .cv-sub {
-    font-size: 13px;
-    color: #666;
-    font-style: italic;
-    margin-bottom: 6px;
-  }
-
-  .cv-doc p { font-size: 14px; margin-bottom: 8px; }
-
-  .cv-doc ul {
-    margin: 4px 0 12px 20px;
-    font-size: 14px;
-  }
-
-  .cv-doc li { margin-bottom: 4px; }
-
-  .cv-doc .cv-cols {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
-  }
-
-  .cv-tag {
-    display: inline-block;
-    background: #f0f3f7;
-    border: 1px solid #d8dee6;
-    color: #1a1a2e;
-    font-size: 12.5px;
-    padding: 3px 10px;
-    border-radius: 14px;
-    margin: 2px 4px 2px 0;
-  }
-
-  /* ===== FOOTER ===== */
-  footer {
-    text-align: center;
-    padding: 24px;
-    color: var(--muted);
-    font-size: 13px;
-    border-top: 1px solid var(--card-border);
-  }
-
-  /* ===== RESPONSIVE ===== */
-  @media (max-width: 900px) {
-    .jobs-grid { grid-template-columns: 1fr; }
-    .cv-doc { padding: 28px 24px; }
-    .cv-doc .cv-cols { grid-template-columns: 1fr; }
-  }
-
-  @media (max-width: 600px) {
-    header { padding: 16px 20px; }
-    main { padding: 20px 16px 48px; }
-    .brand h1 { font-size: 18px; }
-  }
-
-  /* ===== PRINT ===== */
-  @media print {
-    body { background: #fff; }
-    header, footer, .jobs-section, .cv-actions, .section-title, .no-print { display: none !important; }
-    main { padding: 0; }
-    .cv-doc {
-      box-shadow: none;
-      max-width: 100%;
-      padding: 0;
-      border-radius: 0;
-      background: #fff;
-    }
-    .cv-doc h1 { border-color: #ff6b35; }
-  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:var(--bg); color:var(--text); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif; line-height:1.6; min-height:100vh; }
+  header { background:linear-gradient(135deg,#0d1f38 0%,#142844 100%); border-bottom:2px solid var(--accent); padding:20px 32px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px; position:sticky; top:0; z-index:100; }
+  .brand { display:flex; align-items:center; gap:14px; }
+  .brand-logo { width:42px; height:42px; background:var(--accent); border-radius:10px; display:flex; align-items:center; justify-content:center; font-weight:800; font-size:20px; color:#0a1628; }
+  .brand h1 { font-size:22px; font-weight:700; letter-spacing:0.5px; }
+  .brand h1 span { color:var(--accent); }
+  .brand .version { font-size:12px; color:var(--muted); font-weight:600; background:rgba(255,107,53,0.12); padding:3px 10px; border-radius:20px; border:1px solid rgba(255,107,53,0.3); }
+  .header-nav { display:flex; gap:10px; flex-wrap:wrap; }
+  .header-nav a { color:var(--muted); text-decoration:none; font-size:14px; font-weight:600; padding:8px 16px; border-radius:8px; transition:all 0.2s; }
+  .header-nav a:hover, .header-nav a.active { color:var(--accent); background:rgba(255,107,53,0.1); }
+  .last-scan { font-size:12px; color:var(--muted); }
+  main { max-width:1280px; margin:0 auto; padding:32px 24px 64px; }
+  section { margin-bottom:48px; }
+  .section-title { font-size:20px; font-weight:700; margin-bottom:20px; display:flex; align-items:center; gap:10px; }
+  .section-title::before { content:""; width:4px; height:22px; background:var(--accent); border-radius:2px; display:inline-block; }
+  .grid-3 { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+  .grid-2 { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+  .card { background:var(--card); border:1px solid var(--card-border); border-radius:14px; padding:22px; transition:transform 0.2s,border-color 0.2s; }
+  .card:hover { transform:translateY(-3px); border-color:var(--accent); }
+  .card h3 { font-size:17px; font-weight:700; margin-bottom:14px; }
+  .badge { font-size:11px; font-weight:700; padding:4px 10px; border-radius:20px; letter-spacing:0.5px; text-transform:uppercase; }
+  .badge-waiting { background:rgba(255,193,7,0.15); color:var(--yellow); border:1px solid rgba(255,193,7,0.3); }
+  .badge-live { background:rgba(46,204,113,0.15); color:var(--green); border:1px solid rgba(46,204,113,0.3); }
+  .badge-remote { background:rgba(52,152,219,0.15); color:var(--blue); border:1px solid rgba(52,152,219,0.3); }
+  .job-count { font-size:32px; font-weight:800; color:var(--accent); }
+  .placeholder { color:var(--muted); font-size:14px; font-style:italic; text-align:center; padding:20px 0; border:1px dashed var(--card-border); border-radius:10px; }
+  .job-item { padding:14px 0; border-bottom:1px solid var(--card-border); }
+  .job-item:last-child { border-bottom:none; }
+  .job-item h4 { font-size:15px; font-weight:600; margin-bottom:4px; }
+  .job-item .meta { font-size:12px; color:var(--muted); margin-bottom:6px; }
+  .match-bar { height:6px; background:var(--card-border); border-radius:3px; overflow:hidden; margin-top:6px; }
+  .match-fill { height:100%; border-radius:3px; transition:width 0.5s; }
+  .match-high { background:var(--green); }
+  .match-mid { background:var(--yellow); }
+  .match-low { background:var(--red); }
+  .job-link { color:var(--accent); text-decoration:none; font-size:13px; }
+  .job-link:hover { text-decoration:underline; }
+  .gap-tag { display:inline-block; background:rgba(231,76,60,0.15); color:var(--red); border:1px solid rgba(231,76,60,0.3); font-size:12px; padding:3px 10px; border-radius:14px; margin:2px 4px 2px 0; }
+  .skill-tag { display:inline-block; background:rgba(46,204,113,0.15); color:var(--green); border:1px solid rgba(46,204,113,0.3); font-size:12px; padding:3px 10px; border-radius:14px; margin:2px 4px 2px 0; }
+  .trend-item { padding:10px 0; border-bottom:1px solid var(--card-border); font-size:14px; }
+  .trend-item:last-child { border-bottom:none; }
+  .portfolio-item { display:flex; gap:14px; padding:14px 0; border-bottom:1px solid var(--card-border); }
+  .portfolio-item:last-child { border-bottom:none; }
+  .portfolio-icon { font-size:28px; flex-shrink:0; }
+  .portfolio-item h4 { font-size:15px; font-weight:600; margin-bottom:2px; }
+  .portfolio-item p { font-size:13px; color:var(--muted); }
+  .stat-row { display:flex; justify-content:space-between; padding:8px 0; border-bottom:1px solid var(--card-border); font-size:14px; }
+  .stat-row:last-child { border-bottom:none; }
+  .stat-val { font-weight:700; color:var(--accent); }
+  .timeline-item { display:flex; gap:14px; padding:12px 0; border-bottom:1px solid var(--card-border); }
+  .timeline-item:last-child { border-bottom:none; }
+  .timeline-dot { width:10px; height:10px; border-radius:50%; margin-top:6px; flex-shrink:0; }
+  .timeline-dot.applied { background:var(--blue); }
+  .timeline-dot.response { background:var(--yellow); }
+  .timeline-dot.interview { background:var(--accent); }
+  .timeline-dot.offer { background:var(--green); }
+  .timeline-dot.rejected { background:var(--red); }
+  .salary-range { font-size:18px; font-weight:700; color:var(--green); }
+  .salary-note { font-size:12px; color:var(--muted); }
+  .kw-bar { display:flex; align-items:center; gap:10px; padding:6px 0; font-size:13px; }
+  .kw-name { width:180px; flex-shrink:0; }
+  .kw-progress { flex:1; height:8px; background:var(--card-border); border-radius:4px; overflow:hidden; }
+  .kw-fill { height:100%; background:var(--accent); border-radius:4px; }
+  .kw-val { width:60px; text-align:right; color:var(--muted); }
+  .btn { background:var(--accent); color:#0a1628; border:none; padding:10px 18px; border-radius:8px; font-weight:700; font-size:14px; cursor:pointer; transition:opacity 0.2s; }
+  .btn:hover { opacity:0.85; }
+  .cv-actions { display:flex; justify-content:flex-end; margin-bottom:16px; }
+  .cv-doc { background:#fff; color:#1a1a2e; border-radius:14px; padding:48px 56px; max-width:850px; margin:0 auto; box-shadow:0 8px 30px rgba(0,0,0,0.4); }
+  .cv-doc h1 { font-size:26px; color:#0a1628; text-transform:uppercase; letter-spacing:1px; border-bottom:3px solid var(--accent); padding-bottom:8px; margin-bottom:4px; }
+  .cv-doc h2 { font-size:16px; color:var(--accent); text-transform:uppercase; letter-spacing:1px; margin:28px 0 10px; border-bottom:1px solid #ddd; padding-bottom:4px; }
+  .cv-doc h3 { font-size:15px; color:#0a1628; margin:18px 0 2px; }
+  .cv-doc p { font-size:14px; margin-bottom:8px; }
+  .cv-doc ul { margin:4px 0 12px 20px; font-size:14px; }
+  .cv-doc li { margin-bottom:4px; }
+  .cv-doc .cv-sub { font-size:13px; color:#666; font-style:italic; margin-bottom:6px; }
+  .cv-doc .cv-cols { display:grid; grid-template-columns:1fr 1fr; gap:24px; }
+  .cv-tag { display:inline-block; background:#f0f3f7; border:1px solid #d8dee6; color:#1a1a2e; font-size:12.5px; padding:3px 10px; border-radius:14px; margin:2px 4px 2px 0; }
+  footer { text-align:center; padding:24px; color:var(--muted); font-size:13px; border-top:1px solid var(--card-border); }
+  .no-print { }
+  @media (max-width:900px) { .grid-3,.grid-2 { grid-template-columns:1fr; } .cv-doc { padding:28px 24px; } .cv-doc .cv-cols { grid-template-columns:1fr; } }
+  @media (max-width:600px) { header { padding:16px 20px; } main { padding:20px 16px 48px; } .brand h1 { font-size:18px; } }
+  @media print { body { background:#fff; } header,footer,.no-print { display:none !important; } main { padding:0; } .cv-doc { box-shadow:none; max-width:100%; padding:0; border-radius:0; } }
 </style>
 </head>
 <body>
@@ -358,221 +107,383 @@
 <header>
   <div class="brand">
     <div class="brand-logo">JA</div>
-    <div>
-      <h1>Job<span>Activ</span></h1>
-    </div>
-    <span class="version">v1.0</span>
+    <div><h1>Job<span>Activ</span></h1></div>
+    <span class="version">v2.0</span>
   </div>
   <nav class="header-nav">
     <a href="#jobs">Joburi</a>
+    <a href="#portfolio">Portofoliu</a>
+    <a href="#gaps">Skill Gaps</a>
+    <a href="#trends">Trenduri</a>
+    <a href="#learnings">Learnings</a>
+    <a href="#timeline">AplicaČ›ii</a>
+    <a href="#salary">Salarii</a>
     <a href="#cv">CV</a>
   </nav>
 </header>
 
 <main>
 
-  <!-- ===== SECTIUNE JOBURI ===== -->
-  <section id="jobs" class="jobs-section">
-    <div class="section-title">Joburi — Monitorizare Portaluri</div>
-    <div class="jobs-grid">
-
-      <div class="job-card" data-site="bestjobs">
-        <div class="job-card-header">
-          <h3>BestJobs</h3>
-          <span class="job-badge badge-waiting">În așteptare date</span>
-        </div>
-        <div class="job-count" id="count-bestjobs">—</div>
-        <div class="job-placeholder">În așteptare date…</div>
-        <button class="btn-refresh" onclick="refreshSite('bestjobs', this)">🔄 Refresh</button>
-        <div class="job-meta">Ultima actualizare: niciodată</div>
-      </div>
-
-      <div class="job-card" data-site="ejobs">
-        <div class="job-card-header">
-          <h3>EJobs</h3>
-          <span class="job-badge badge-waiting">În așteptare date</span>
-        </div>
-        <div class="job-count" id="count-ejobs">—</div>
-        <div class="job-placeholder">În așteptare date…</div>
-        <button class="btn-refresh" onclick="refreshSite('ejobs', this)">🔄 Refresh</button>
-        <div class="job-meta">Ultima actualizare: niciodată</div>
-      </div>
-
-      <div class="job-card" data-site="indeed">
-        <div class="job-card-header">
-          <h3>Indeed</h3>
-          <span class="job-badge badge-waiting">În așteptare date</span>
-        </div>
-        <div class="job-count" id="count-indeed">—</div>
-        <div class="job-placeholder">În așteptare date…</div>
-        <button class="btn-refresh" onclick="refreshSite('indeed', this)">🔄 Refresh</button>
-        <div class="job-meta">Ultima actualizare: niciodată</div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ===== SECTIUNE CV ===== -->
-  <section id="cv">
-    <div class="section-title">CV — Andrei D. Ivanov</div>
-    <div class="cv-actions no-print">
-      <button class="btn-print" onclick="window.print()">🖨️ Printează CV</button>
-    </div>
-
-    <div class="cv-doc" id="cv-doc">
-      <h1>Andrei Dimitrov Ivanov</h1>
-      <p class="cv-contact">Coordinate: (+39) &nbsp;•&nbsp; Ivrea, Piemonte, Italia</p>
-
-      <h2>Profilo Professionale</h2>
-      <p>Tecnico edile e coordinatore cantieri con oltre 10 anni di esperienza in Italia, specializzato in gestione di cantieri multipli (5 cantieri simultanei, 4-5 squadre, ~20 operatori), approvvigionamento materiali, logistica e risoluzione problemi sul campo. In parallelo, ha progettato e sviluppato un ecosistema di automazione AI (15 agenti artificiali) per la gestione integrata di finanze, cantieri, documentazione e comunicazioni — competenze acquisite in autonomia come autodidatta durante l'attività lavorativa. Obiettivo: transizione verso ruoli a prevalente contenuto intellettuale/tecnico, valorizzando l'esperienza sul campo unita alle competenze digitali emergenti.</p>
-
-      <h2>Esperienza Professionale</h2>
-
-      <h3>Coordinatore Cantieri / Tecnico Edile</h3>
-      <p class="cv-sub">Baltea Group — Ivrea (TO), Italia | 2025 – presente</p>
-      <ul>
-        <li>Coordinamento operativo di 5 cantieri simultanei in Piemonte e Valle d'Aosta</li>
-        <li>Gestione di 4-5 squadre di lavoro (~20 operatori)</li>
-        <li>Approvvigionamento materiali, logistica, programmazione interventi</li>
-        <li>Risoluzione tecnica "al volo" su problemi strutturali, di facciata, isolamento termico</li>
-        <li>Conduzione mezzi pesanti (patente CQC)</li>
-        <li>Rilevamento misurazioni, calcolo superfici e consumi materiali</li>
-        <li>Interfaccia con fornitori (Struktura, Galvani, Ferrentino, Formento, Edil Ceramic, ecc.)</li>
-        <li>Gestione chiusure cantieri, consegne lavori, rapporti con committenti</li>
-      </ul>
-
-      <h3>Operaio Edile Specializzato</h3>
-      <p class="cv-sub">Settore edilizia — Piemonte, Italia | 2015 – 2025</p>
-      <ul>
-        <li>Lavori su facciate: isolamento termico (sistema a cappotto), rifinititure</li>
-        <li>Demolizioni, ricostruzioni balconi, installazione ringhiere</li>
-        <li>Ripristino pavimentazioni (gresie ceramiche, piastrelle)</li>
-        <li>Lavori su pensiline, sofitto, verniciatura telai</li>
-        <li>Montaggio staffe, strutture di supporto</li>
-        <li>Carico/scarico materiali, movimentazione manuale</li>
-      </ul>
-
-      <h3>Esperienza pre-Italia</h3>
-      <p class="cv-sub">Romania | fino al 2015</p>
-      <ul>
-        <li>Formazione come conductor arquitect (tecnico del costruire)</li>
-        <li>Attività nel settore edile residenziale</li>
-      </ul>
-
-      <h2>Competenze Tecniche</h2>
-
-      <div class="cv-cols">
-        <div>
-          <h3>Settore Edile</h3>
-          <ul>
-            <li>Coordinamento cantieri multipli</li>
-            <li>Lettura e interpretazione progetti (DWG, CAD)</li>
-            <li>Calcolo materiali, superfici, quantitativi</li>
-            <li>Isolamento termico facciate (EPS, sistemi a cappotto)</li>
-            <li>Lavori strutturali: demolizioni, consolidamenti, deconsolidazioni</li>
-            <li>Finiture: pavimentazioni, rivestimenti, verniciature</li>
-            <li>Normativa edilizia italiana (SCIA, Salva Casa, Genio Civile, paesaggistica)</li>
-            <li>Gestione fornitori e logistica materiali</li>
-          </ul>
-        </div>
-        <div>
-          <h3>Informatica / AI / Automazione <em>(autodidatta)</em></h3>
-          <div>
-            <span class="cv-tag">OpenClaw</span>
-            <span class="cv-tag">n8n</span>
-            <span class="cv-tag">Python</span>
-            <span class="cv-tag">JavaScript / Node.js</span>
-            <span class="cv-tag">PowerShell</span>
-            <span class="cv-tag">Docker</span>
-            <span class="cv-tag">GitHub Pages</span>
-            <span class="cv-tag">Tailscale VPN</span>
-            <span class="cv-tag">Ollama (LLM locali)</span>
-            <span class="cv-tag">API Groq / Whisper</span>
-            <span class="cv-tag">SQLite</span>
-            <span class="cv-tag">NotebookLM (64+ notebook)</span>
-            <span class="cv-tag">PWA (Lola Voice)</span>
-            <span class="cv-tag">Git / GitHub</span>
-            <span class="cv-tag">Dashboard HTML/CSS/JS</span>
+  <!-- ===== JOBURI ===== -->
+  <section id="jobs">
+    <div class="section-title">Joburi â€” Scanare #1 (11 Sept 2026, 23:32)</div>
+    <div class="grid-3">
+      <div class="card" id="col-remote-eu">
+        <h3>đź‡Şđź‡ş Remote Europa</h3>
+        <span class="badge badge-live" id="badge-eu">LIVE</span>
+        <div class="job-count" id="count-eu">3</div>
+        <div id="jobs-eu">
+          <div class="job-item">
+            <h4>AI Consultant â€” Construction Industry</h4>
+            <div class="meta">Teamsware GmbH Â· Germany Â· Remote Â· 3 zile ago</div>
+            <div class="meta"><strong>Match: 65%</strong> Â· AI automation + construction âś… Â· German required âťŚ</div>
+            <div class="match-bar"><div class="match-fill match-mid" style="width:65%"></div></div>
+            <a class="job-link" href="https://www.remoterocketship.com/company/teamsware-eu/jobs/ai-consultant-ai-enthusiast-construction-industry-worldwide-remote/" target="_blank">Vezi job â†’</a>
+          </div>
+          <div class="job-item">
+            <h4>Platform & Data Engineer (AEC)</h4>
+            <div class="meta">neoBIM GmbH Â· Karlsruhe, DE Â· 100% Remote Â· May 2026</div>
+            <div class="meta"><strong>Match: 58%</strong> Â· Python/Docker/GitHub âś… Â· GCP/Terraform gap Â· DE only</div>
+            <div class="match-bar"><div class="match-fill match-mid" style="width:58%"></div></div>
+            <a class="job-link" href="https://jobera.com/job/craft-aec-karriere-platform-data-engineer-full-time-100-remote-ae2ea547/" target="_blank">Vezi job â†’</a>
+          </div>
+          <div class="job-item">
+            <h4>Technical CAD Application Manager</h4>
+            <div class="meta">GROPYUS Â· Berlin, DE Â· Remote Â· Feb 2026</div>
+            <div class="meta"><strong>Match: 55%</strong> Â· Construction + tech âś… Â· German gap Â· CAD depth</div>
+            <div class="match-bar"><div class="match-fill match-mid" style="width:55%"></div></div>
+            <a class="job-link" href="https://remotescout24.com/en/job/8234380-76919894-3d86-43a3-bf59-57f73b31decb" target="_blank">Vezi job â†’</a>
           </div>
         </div>
       </div>
+      <div class="card" id="col-remote-global">
+        <h3>đźŚŤ Remote Global</h3>
+        <span class="badge badge-live" id="badge-global">LIVE</span>
+        <div class="job-count" id="count-global">4</div>
+        <div id="jobs-global">
+          <div class="job-item">
+            <h4>Digital Delivery Program Manager</h4>
+            <div class="meta">VEC Â· USA Remote Â· Aug 2026</div>
+            <div class="meta"><strong>Match: 52%</strong> Â· Construction tech âś… Â· US only</div>
+            <div class="match-bar"><div class="match-fill match-low" style="width:52%"></div></div>
+            <a class="job-link" href="https://taskworks.totalh.net/remote-jobs/remote-digital-delivery-program-manager" target="_blank">Vezi job â†’</a>
+          </div>
+          <div class="job-item">
+            <h4>Senior VDC Project Engineer</h4>
+            <div class="meta">DPR Construction Â· US Remote Â· $108-145K</div>
+            <div class="meta"><strong>Match: 50%</strong> Â· VDC + construction âś… Â· US only Â· English fluent</div>
+            <div class="match-bar"><div class="match-fill match-low" style="width:50%"></div></div>
+            <a class="job-link" href="https://hiring.camp/job/lmJNXD" target="_blank">Vezi job â†’</a>
+          </div>
+          <div class="job-item">
+            <h4>Engineering Manager, Building Generation</h4>
+            <div class="meta">Higharc Â· Europe Remote Â· Jul 2026</div>
+            <div class="meta"><strong>Match: 52%</strong> Â· Construction tech startup âś… Â· Senior eng mgmt</div>
+            <div class="match-bar"><div class="match-fill match-low" style="width:52%"></div></div>
+            <a class="job-link" href="https://workvista.synergize.co/remote-jobs/engineering-manager-building-generation-europe" target="_blank">Vezi job â†’</a>
+          </div>
+          <div class="job-item">
+            <h4>Maintenance Digital Solutions Manager</h4>
+            <div class="meta">Etex Â· Global Remote Â· Aug 2026</div>
+            <div class="meta"><strong>Match: 58%</strong> Â· Digital transformation + construction âś…</div>
+            <div class="match-bar"><div class="match-fill match-mid" style="width:58%"></div></div>
+            <a class="job-link" href="https://talentpulse.66ghz.com/remote-jobs/maintenance-digital-solutions-manager" target="_blank">Vezi job â†’</a>
+          </div>
+        </div>
+      </div>
+      <div class="card" id="col-italia">
+        <h3>đź‡®đź‡ą Italia</h3>
+        <span class="badge badge-live" id="badge-it">LIVE</span>
+        <div class="job-count" id="count-it">4</div>
+        <div id="jobs-it">
+          <div class="job-item">
+            <h4>BIM Coordinator â€” Sede (Tortona)</h4>
+            <div class="meta">Itinera Â· Tortona, AL Â· â‚¬55,000 Â· Aug 2026</div>
+            <div class="meta"><strong>Match: 63%</strong> Â· Coordonare âś… Â· Italian C1+ âś… Â· Aproape Ivrea! Â· BIM software gap</div>
+            <div class="match-bar"><div class="match-fill match-mid" style="width:63%"></div></div>
+            <a class="job-link" href="https://lavori.co.it/bim-coordinator_tortona-c281184/2026-08-itinera_i4171072624" target="_blank">Vezi job â†’</a>
+          </div>
+          <div class="job-item">
+            <h4>Senior BIM Coordinator â€” Remote & Growth</h4>
+            <div class="meta">Sinergo Spa Â· Martellago, VE Â· â‚¬50,000 Â· Remote options</div>
+            <div class="meta"><strong>Match: 62%</strong> Â· Construction âś… Â· Remote partial Â· BIM software gap</div>
+            <div class="match-bar"><div class="match-fill match-mid" style="width:62%"></div></div>
+            <a class="job-link" href="https://lavori.co.it/bim-coordinator_martellago-c299196/2026-08-sinergo-spa_i4189293146" target="_blank">Vezi job â†’</a>
+          </div>
+          <div class="job-item">
+            <h4>BIM Coordinator â€” Construction</h4>
+            <div class="meta">Adecco Â· Medolago, BG Â· Sep 2026</div>
+            <div class="meta"><strong>Match: 60%</strong> Â· Construction sector âś… Â· Agency Â· BIM gap</div>
+            <div class="match-bar"><div class="match-fill match-mid" style="width:60%"></div></div>
+            <a class="job-link" href="https://lavori.co.it/bim-coordinator_medolago-c282915/2026-09-adecco_i4200120581" target="_blank">Vezi job â†’</a>
+          </div>
+          <div class="job-item">
+            <h4>BIM Lead â€” Settore Civile/Architettura</h4>
+            <div class="meta">TEKNE SpA Â· Sant'Ambrogio di Torino Â· Sep 2026</div>
+            <div class="meta"><strong>Match: 58%</strong> Â· Aproape Ivrea âś… Â· BIM software gap Â· On-site</div>
+            <div class="match-bar"><div class="match-fill match-mid" style="width:58%"></div></div>
+            <a class="job-link" href="https://www.jobijoba.it/annunci-di-lavoro/13/57fe1df7f8e173d00f841af8efa5f6ec" target="_blank">Vezi job â†’</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-      <h3>Patenti</h3>
-      <ul>
-        <li>Patente CQC (conduzione mezzi pesanti)</li>
-        <li>Patente B</li>
-      </ul>
+  <!-- ===== PORTOFOLIU SMARTLOLA ===== -->
+  <section id="portfolio">
+    <div class="section-title">đź“ Portofoliu SmartLola â€” DemonstraciĂłn Viviente</div>
+    <div class="card">
+      <p style="font-size:15px; margin-bottom:20px; color:var(--muted);">Ce a construit Andrei â€” dovada practicÄ a competenČ›elor tech, dezvoltatÄ Ă®n paralel cu munca fizicÄ pe Č™antier.</p>
+      <div class="grid-3">
+        <div>
+          <div class="portfolio-item">
+            <div class="portfolio-icon">đź§­</div>
+            <div><h4>Lola â€” Coordination Agent</h4><p>Orchestrare 15 agenČ›i AI, memorie persistentÄ, sincronizare inter-canal</p></div>
+          </div>
+          <div class="portfolio-item">
+            <div class="portfolio-icon">đź’°</div>
+            <div><h4>Guda â€” Finance Agent</h4><p>SQLite DB, 300+ tranzacČ›ii, rapoarte automate, OCR bonuri</p></div>
+          </div>
+          <div class="portfolio-item">
+            <div class="portfolio-icon">đźŹ—</div>
+            <div><h4>Atlas â€” Work Agent</h4><p>Program Č™antier, ore lucrate, coordinare echipe</p></div>
+          </div>
+        </div>
+        <div>
+          <div class="portfolio-item">
+            <div class="portfolio-icon">đź“Š</div>
+            <div><h4>Dashboard Live</h4><p>GitHub Pages, date reale, dark mode, responsive</p></div>
+          </div>
+          <div class="portfolio-item">
+            <div class="portfolio-icon">đź“±</div>
+            <div><h4>Lola Voice PWA</h4><p>Control vocal hands-free, wake word, Groq Whisper, TTS</p></div>
+          </div>
+          <div class="portfolio-item">
+            <div class="portfolio-icon">đź”—</div>
+            <div><h4>IntegrÄri Multi-Canal</h4><p>Telegram, WhatsApp, WebChat â€” sincronizare automatÄ</p></div>
+          </div>
+        </div>
+        <div>
+          <div class="portfolio-item">
+            <div class="portfolio-icon">đź§ </div>
+            <div><h4>NotebookLM KB</h4><p>66+ notebook-uri, chat live, knowledge management</p></div>
+          </div>
+          <div class="portfolio-item">
+            <div class="portfolio-icon">đź”„</div>
+            <div><h4>AutomatizÄri</h4><p>Cron jobs, backup zilnic, auto-sync, classifier AI</p></div>
+          </div>
+          <div class="portfolio-item">
+            <div class="portfolio-icon">âš™ď¸Ź</div>
+            <div><h4>Infrastructura</h4><p>Git/GitHub, Tailscale VPN, Docker, OpenClaw Gateway</p></div>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top:20px; padding:16px; background:rgba(255,107,53,0.08); border-radius:10px; border:1px solid rgba(255,107,53,0.2); font-size:14px;">
+        <strong>đź’ˇ Punct cheie:</strong> Toate construite de o singurÄ persoanÄ, autodidact, Ă®n paralel cu munca fizicÄ pe Č™antier. 20 luni de la "ce e IT-ul" la "orchestreazÄ 15 agenČ›i AI". Asta e dovada â€” nu teoria.
+      </div>
+    </div>
+  </section>
 
-      <h2>Lingue</h2>
-      <ul>
-        <li><strong>Romano:</strong> Madrelingua</li>
-        <li><strong>Italiano:</strong> Avanzato (C1+) — 10+ anni residenza e lavoro in Italia</li>
-        <li><strong>Inglese:</strong> Intermedio (B1) — lettura documentazione tecnica, comunicazione scritta</li>
-      </ul>
+  <!-- ===== SKILL GAPS ===== -->
+  <section id="gaps">
+    <div class="section-title">âš ď¸Ź Skill Gaps â€” Ce Ă®Č›i lipseČ™te</div>
+    <div class="card">
+      <p style="font-size:14px; color:var(--muted); margin-bottom:16px;">Skill-uri cerute frecvent Ă®n joburile gÄsite, pe care Andrei nu le are Ă®ncÄ. Detectate automat din scanÄri.</p>
+      <div id="gaps-list">
+        <div style="margin-bottom:12px;">
+          <span class="gap-tag">BIM Software (Revit, Navisworks) â€” 7 joburi</span>
+          <span class="gap-tag">English C1+ â€” 5 joburi âš ď¸Ź BLOCKER</span>
+          <span class="gap-tag">German â€” 3 joburi</span>
+          <span class="gap-tag">ISO 19650 / BIM Standards â€” 4 joburi</span>
+          <span class="gap-tag">VDC (Virtual Design & Construction) â€” 4 joburi</span>
+          <span class="gap-tag">Cloud (GCP/Azure) â€” 3 joburi</span>
+          <span class="gap-tag">Terraform / IaC â€” 2 joburi</span>
+          <span class="gap-tag">Power Platform / Copilot Studio â€” 1 job</span>
+        </div>
+        <div style="padding:14px; background:rgba(231,76,60,0.08); border-radius:10px; border:1px solid rgba(231,76,60,0.2); font-size:14px;">
+          <strong>đźš¨ Blocker #1:</strong> Engleza B1 â†’ C1+. Majoritatea joburilor remote cer "fluent English". PĂ˘nÄ la B2+/C1, joburile remote EU sunt limitate la Italia/italianÄ.
+        </div>
+        <div style="margin-top:10px; padding:14px; background:rgba(255,193,7,0.08); border-radius:10px; border:1px solid rgba(255,193,7,0.2); font-size:14px;">
+          <strong>âšˇ Quick win:</strong> BIM software (Revit). Apare Ă®n 7/10 joburi relevante. Prof poate crea plan de Ă®nvÄČ›are. Cu experienČ›a de Č™antier a lui Andrei + Revit, match-ul creČ™te la 75-80% pentru BIM Coordinator.
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- ===== TRENDURI ===== -->
+  <section id="trends">
+    <div class="section-title">đź“Š Trenduri PiaČ›Ä</div>
+    <div class="grid-2">
+      <div class="card">
+        <h3>ROLURI CARE APAR</h3>
+        <div id="trends-roles">
+          <div class="trend-item"><strong>BIM Coordinator</strong> â€” 8 apariČ›ii Â· â‚¬50-55K IT Â· Rol-punte ideal pentru Andrei</div>
+          <div class="trend-item"><strong>AI Consultant (Construction)</strong> â€” 3 apariČ›ii Â· Sector emergent Â· Teamsware, neoBIM, Higharc</div>
+          <div class="trend-item"><strong>VDC Engineer</strong> â€” 4 apariČ›ii Â· $108-145K US Â· Trend global care va ajunge Ă®n EU</div>
+          <div class="trend-item"><strong>Digital Transformation Manager</strong> â€” 2 apariČ›ii Â· Etex, GROPYUS Â· ConstrucČ›ii + digital</div>
+          <div class="trend-item"><strong>Platform Engineer (AEC)</strong> â€” 2 apariČ›ii Â· neoBIM Â· Python/TS/Docker/Cloud</div>
+        </div>
+      </div>
+      <div class="card">
+        <h3>SECTOARE ĂŽN CREČTERE</h3>
+        <div id="trends-sectors">
+          <div class="trend-item"><strong>BIM obligatoriu IT 2026</strong> â€” Linee Guida MIT + UNI 11337-11:2026 + reformÄ TUE. PiaČ›a IT se extinde masiv.</div>
+          <div class="trend-item"><strong>AI in construction</strong> â€” Startup-uri (neoBIM, Higharc, Teamsware) angajeazÄ activ</div>
+          <div class="trend-item"><strong>Germania = hub construction tech EU</strong> â€” 4/5 companii EU relevante sunt germane</div>
+          <div class="trend-item"><strong>Remote construction tech</strong> â€” Majoritar US, dar Europa creČ™te (DE, PL, EE)</div>
+          <div class="trend-item"><strong>PNRR digitalizzazione</strong> â€” Fonduri IT active, companiile trebuie sÄ se adapteze BIM</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== LEARNINGS ===== -->
+  <section id="learnings">
+    <div class="section-title">đź§  Learnings JobActiv â€” Ce a Ă®nvÄČ›at</div>
+    <div class="card">
+      <p style="font-size:14px; color:var(--muted); margin-bottom:16px;">Keyword-uri care produc rezultate bune vs zgomot. JobActiv prioritizeazÄ automat ce funcČ›ioneazÄ.</p>
+      <div id="kw-performance">
+        <div class="kw-bar"><span class="kw-name">edilizia 4.0</span><div class="kw-progress"><div class="kw-fill" style="width:100%"></div></div><span class="kw-val">4/1</span></div>
+        <div class="kw-bar"><span class="kw-name">construction tech</span><div class="kw-progress"><div class="kw-fill" style="width:75%"></div></div><span class="kw-val">3/1</span></div>
+        <div class="kw-bar"><span class="kw-name">digital transformation construction</span><div class="kw-progress"><div class="kw-fill" style="width:100%"></div></div><span class="kw-val">4/1</span></div>
+        <div class="kw-bar"><span class="kw-name">AEC automation</span><div class="kw-progress"><div class="kw-fill" style="width:75%"></div></div><span class="kw-val">3/1</span></div>
+        <div class="kw-bar"><span class="kw-name">PropTech</span><div class="kw-progress"><div class="kw-fill" style="width:50%"></div></div><span class="kw-val">2/1</span></div>
+        <div class="kw-bar"><span class="kw-name">digitalizzazione edilizia</span><div class="kw-progress"><div class="kw-fill" style="width:0%;background:var(--red)"></div></div><span class="kw-val">0/1 âš ď¸Ź</span></div>
+      </div>
+      <div style="margin-top:14px; padding:12px; background:rgba(255,193,7,0.08); border-radius:8px; border:1px solid rgba(255,193,7,0.2); font-size:13px;">
+        <strong>đź’ˇ Calibrare:</strong> "digitalizzazione edilizia" returneazÄ doar Č™tiri/normative, NU joburi. ReprioritizeazÄ pentru trend monitoring. "edilizia 4.0" e cel mai bun keyword pentru piaČ›a IT.
+      </div>
+      <div style="margin-top:20px;">
+        <div class="stat-row"><span>ScanÄri totale</span><span class="stat-val" id="scan-count">1</span></div>
+        <div class="stat-row"><span>Ultima scanare</span><span class="stat-val" id="last-scan">11 Sept 2026, 23:32</span></div>
+        <div class="stat-row"><span>Surse active</span><span class="stat-val" id="sources-active">1</span></div>
+        <div class="stat-row"><span>Joburi gÄsite (total)</span><span class="stat-val">11</span></div>
+        <div class="stat-row"><span>Joburi >60% match</span><span class="stat-val">4</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TIMELINE APLICÄ‚RI ===== -->
+  <section id="timeline">
+    <div class="section-title">đź“‹ Timeline AplicaČ›ii</div>
+    <div class="card">
+      <div id="timeline-list"><div class="placeholder">Nicio aplicaČ›ie Ă®ncÄ. CĂ˘nd Andrei aplicÄ, apare aici cu status Č™i follow-up.</div></div>
+    </div>
+  </section>
+
+  <!-- ===== SALARIU BENCHMARK ===== -->
+  <section id="salary">
+    <div class="section-title">đź’° Salariu Benchmark â€” Calibrat Scanare #1</div>
+    <div class="card">
+      <p style="font-size:14px; color:var(--muted); margin-bottom:16px;">Range estimat per rol/regiune. Date confirmate din joburi reale (Scanare #1, 11 Sept 2026).</p>
+      <div class="grid-2">
+        <div>
+          <div class="stat-row"><span>BIM Coordinator (Italia)</span><span class="salary-range">â‚¬50-55K</span></div>
+          <div class="stat-row"><span>BIM Coordinator (EU remote)</span><span class="salary-range">â‚¬40-60K</span></div>
+          <div class="stat-row"><span>AI Consultant Construction (DE)</span><span class="salary-range">â‚¬45-65K</span></div>
+          <div class="stat-row"><span>Platform Engineer AEC (EU)</span><span class="salary-range">â‚¬45-70K</span></div>
+          <div class="stat-row"><span>Digital Transformation Mgr (EU)</span><span class="salary-range">â‚¬50-70K</span></div>
+          <div class="stat-row"><span>VDC Engineer (US remote)</span><span class="salary-range">$108-145K</span></div>
+        </div>
+        <div>
+          <div class="stat-row"><span>Cheltuieli lunare (Guda)</span><span class="stat-val" id="guda-monthly">â€”</span></div>
+          <div class="stat-row"><span>Salariu minim necesar</span><span class="stat-val" id="guda-min">â€”</span></div>
+          <div class="stat-row"><span>Salariu Č›intÄ (an 1)</span><span class="stat-val">â‚¬35-50K</span></div>
+          <div class="stat-row"><span>Salariu Č›intÄ (an 2-3)</span><span class="stat-val">â‚¬50-70K</span></div>
+          <div class="stat-row"><span>Confirmat: BIM Coord IT</span><span class="stat-val">â‚¬55K</span></div>
+          <div class="stat-row"><span>Confirmat: BIM Coord IT (senior)</span><span class="stat-val">â‚¬50K</span></div>
+        </div>
+      </div>
+      <p class="salary-note" style="margin-top:14px;">đź’ˇ Date confirmate din joburi reale: Itinera (â‚¬55K), Sinergo (â‚¬50K), DPR Construction ($108-145K). Guda trebuie sÄ verifice dacÄ â‚¬50K acoperÄ cheltuieli + economisire.</p>
+    </div>
+  </section>
+
+  <!-- ===== CV ===== -->
+  <section id="cv">
+    <div class="section-title">CV â€” Andrei D. Ivanov</div>
+    <div class="cv-actions no-print">
+      <button class="btn" onclick="window.print()">đź–¨ď¸Ź PrinteazÄ CV</button>
+    </div>
+    <div class="cv-doc">
+      <h1>Andrei Dimitrov Ivanov</h1>
+      <p class="cv-contact" style="color:#555; font-size:14px; margin-bottom:24px;">(+39) â€˘ Ivrea, Piemonte, Italia</p>
+      <h2>Profilo Professionale</h2>
+      <p>Tecnico edile e coordinatore cantieri con oltre 10 anni di esperienza in Italia, specializzato in gestione di cantieri multipli (5 cantieri simultanei, 4-5 squadre, ~20 operatori), approvvigionamento materiali, logistica e risoluzione problemi sul campo. In parallelo, ha progettato e sviluppato un ecosistema di automazione AI (15 agenti artificiali) per la gestione integrata di finanze, cantieri, documentazione e comunicazioni â€” competenze acquisite in autonomia come autodidatta durante l'attivitĂ  lavorativa. Obiettivo: transizione verso ruoli a prevalente contenuto intellettuale/tecnico, valorizzando l'esperienza sul campo unita alle competenze digitali emergenti.</p>
+      <h2>Esperienza Professionale</h2>
+      <h3>Coordinatore Cantieri / Tecnico Edile</h3>
+      <p class="cv-sub">Baltea Group â€” Ivrea (TO), Italia | 2025 â€“ presente</p>
+      <ul><li>Coordinamento operativo di 5 cantieri simultanei in Piemonte e Valle d'Aosta</li><li>Gestione di 4-5 squadre di lavoro (~20 operatori)</li><li>Approvvigionamento materiali, logistica, programmazione interventi</li><li>Risoluzione tecnica "al volo" su problemi strutturali, di facciata, isolamento termico</li><li>Conduzione mezzi pesanti (patente CQC)</li><li>Interfaccia con fornitori (Struktura, Galvani, Ferrentino, Formento, Edil Ceramic, ecc.)</li></ul>
+      <h3>Operaio Edile Specializzato</h3>
+      <p class="cv-sub">Settore edilizia â€” Piemonte, Italia | 2015 â€“ 2025</p>
+      <ul><li>Lavori su facciate: isolamento termico (sistema a cappotto), rifinititure</li><li>Demolizioni, ricostruzioni balconi, installazione ringhiere</li><li>Ripristino pavimentazioni (gresie ceramiche, piastrelle)</li><li>Lavori su pensiline, sofitto, verniciatura telai</li></ul>
+      <h2>Competenze Tecniche</h2>
+      <div class="cv-cols">
+        <div>
+          <h3>Settore Edile</h3>
+          <ul><li>Coordinamento cantieri multipli</li><li>Lettura progetti (DWG, CAD)</li><li>Isolamento termico (EPS, cappotto)</li><li>Lavori strutturali: demolizioni, consolidamenti</li><li>Normativa edilizia (SCIA, Salva Casa, Genio Civile)</li></ul>
+        </div>
+        <div>
+          <h3>Informatica / AI <em>(autodidatta)</em></h3>
+          <div><span class="cv-tag">OpenClaw</span><span class="cv-tag">Python</span><span class="cv-tag">JavaScript/Node.js</span><span class="cv-tag">Docker</span><span class="cv-tag">GitHub Pages</span><span class="cv-tag">Tailscale</span><span class="cv-tag">Ollama LLM</span><span class="cv-tag">API Groq/Whisper</span><span class="cv-tag">SQLite</span><span class="cv-tag">NotebookLM</span><span class="cv-tag">PWA</span><span class="cv-tag">Git/GitHub</span></div>
+        </div>
+      </div>
       <h2>Progetti Personali</h2>
-      <h3>SmartLola — Ecosistema AI personale (2025 – presente)</h3>
-      <p>Progetto autonomo di automazione personale con 15 agenti AI specializzati:</p>
-      <ul>
-        <li>Gestione finanziaria familiare (database SQLite, 170+ transazioni)</li>
-        <li>Monitoraggio cantieri (programmi giornalieri, registrazione ore)</li>
-        <li>Dashboard live su GitHub Pages</li>
-        <li>App PWA vocale per controllo hands-free (Lola Voice)</li>
-        <li>Integrazione WhatsApp/Telegram per comunicazioni</li>
-        <li>Backup automatico, sincronizzazione inter-canale</li>
-        <li>Transcrizione audio automatica (Groq Whisper API)</li>
-        <li>Riconoscimento immagini (OCR scontrini, analisi foto)</li>
-        <li>Sviluppo interamente in autonomia, in parallelo con attività lavorativa</li>
-      </ul>
-
-      <h2>Formazione</h2>
-      <h3>Conductor Arquitect (Tecnico del Costruire)</h3>
-      <p class="cv-sub">Romania</p>
-      <p>Formazione tecnica in architettura e costruzioni. Competenze in progettazione, calcolo strutturale, lettura progetti.</p>
-
-      <h2>Altro</h2>
-      <ul>
-        <li>Disponibilità immediata</li>
-        <li>Residenza: Ivrea (TO), Piemonte</li>
-        <li>Autonomia in trasferte (esperienza Valle d'Aosta, Piemonte)</li>
-        <li>Approccio pratico alla risoluzione dei problemi ("al volo")</li>
-        <li>Attitudine all'apprendimento autonomo e all'innovazione</li>
-      </ul>
-
-      <p style="margin-top: 24px; font-size: 13px; color: #666;"><em>References disponibili su richiesta</em></p>
+      <h3>SmartLola â€” Ecosistema AI personale (2025 â€“ presente)</h3>
+      <p>15 agenti AI specializzati: gestione finanziaria (SQLite, 300+ transazioni), monitoraggio cantieri, dashboard live GitHub Pages, app PWA vocale, integrazione WhatsApp/Telegram, backup automatico, OCR, transcrizione audio. Sviluppo in autonomia, in parallelo con attivitĂ  lavorativa.</p>
+      <h2>Lingue</h2>
+      <ul><li><strong>Romano:</strong> Madrelingua</li><li><strong>Italiano:</strong> C1+ (10+ anni)</li><li><strong>Inglese:</strong> B1 (documentazione tecnica)</li></ul>
+      <p style="margin-top:24px;font-size:13px;color:#666;"><em>References disponibili su richiesta</em></p>
     </div>
   </section>
 
 </main>
 
 <footer>
-  JobActiv v1.0 — Dashboard personală de monitorizare joburi &amp; CV • Andrei D. Ivanov
+  JobActiv v2.0 â€” Dashboard carierÄ Andrei D. Ivanov â€˘ SmartLola Ecosystem â€˘ <span id="footer-date">2026</span>
 </footer>
 
 <script>
-  const siteNames = { bestjobs: 'BestJobs', ejobs: 'EJobs', indeed: 'Indeed' };
-  const lastUpdated = {};
+  // Dashboard se auto-actualizeazÄ din learnings.json dupÄ fiecare scanare
+  // Prima scanare: 12 Sept 2026, 08:00 (cron jobactiv-scan)
 
-  function refreshSite(site, btn) {
-    btn.disabled = true;
-    btn.textContent = '⏳ Se încarcă…';
+  function updateDashboard(data) {
+    if (!data) return;
 
-    // Placeholder: datele vor fi populate ulterior de scraper/API.
-    setTimeout(() => {
-      const now = new Date().toLocaleString('ro-RO');
-      lastUpdated[site] = now;
-      const badge = document.querySelector(`.job-card[data-site="${site}"] .job-badge`);
-      badge.textContent = 'În așteptare date';
-      badge.className = 'job-badge badge-waiting';
-      document.getElementById(`count-${site}`).textContent = '—';
-      const ph = document.querySelector(`.job-card[data-site="${site}"] .job-placeholder`);
-      ph.textContent = 'În așteptare date…';
-      const meta = document.querySelector(`.job-card[data-site="${site}"] .job-meta`);
-      meta.textContent = 'Ultima actualizare: ' + now + ' (fără date)';
-      btn.disabled = false;
-      btn.textContent = '🔄 Refresh';
-    }, 800);
+    // Scan stats
+    document.getElementById('scan-count').textContent = data.scanCount || 0;
+    document.getElementById('last-scan').textContent = data.lastScan ? new Date(data.lastScan).toLocaleString('ro-RO') : 'â€”';
+
+    // Keyword performance
+    const kwEl = document.getElementById('kw-performance');
+    if (data.keywords && Object.keys(data.keywords).length > 0) {
+      const sorted = Object.entries(data.keywords).sort((a,b) => b[1].goodResults - a[1].goodResults);
+      kwEl.innerHTML = sorted.map(([kw, d]) => {
+        const max = Math.max(...sorted.map(s => s[1].goodResults), 1);
+        const pct = (d.goodResults / max * 100).toFixed(0);
+        return `<div class="kw-bar"><span class="kw-name">${kw}</span><div class="kw-progress"><div class="kw-fill" style="width:${pct}%"></div></div><span class="kw-val">${d.goodResults}/${d.uses}</span></div>`;
+      }).join('');
+    }
+
+    // Skill gaps
+    const gapsEl = document.getElementById('gaps-list');
+    if (data.skillGaps && data.skillGaps.length > 0) {
+      const sorted = data.skillGaps.sort((a,b) => b.count - a.count).slice(0, 10);
+      gapsEl.innerHTML = sorted.map(g => `<span class="gap-tag">${g.skill} (${g.count} joburi)</span>`).join('');
+    }
+
+    // Sources active
+    const sources = data.sources || {};
+    const activeSources = Object.values(sources).filter(s => s.scans > 0).length;
+    document.getElementById('sources-active').textContent = activeSources;
   }
+
+  // ĂŽncearcÄ sÄ Ă®ncarce learnings.json
+  fetch('agents/jobactiv/learnings.json')
+    .then(r => r.json())
+    .then(data => updateDashboard(data))
+    .catch(() => console.log('Learnings nu e disponibil Ă®ncÄ'));
+
+  document.getElementById('footer-date').textContent = new Date().getFullYear();
 </script>
 
 </body>
