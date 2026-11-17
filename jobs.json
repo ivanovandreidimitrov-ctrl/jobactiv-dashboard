@@ -1,14 +1,14 @@
 {
-  "last_updated": "2026-11-17T05:07:04.624428+00:00",
+  "last_updated": "2026-11-17T07:00:49.460320+00:00",
   "total_jobs": 19,
   "sources": [
-    "eJobs",
     "remoteok",
-    "wwr"
+    "wwr",
+    "eJobs"
   ],
   "jobs": [
     {
-      "id": "wwr-2544390533642982427",
+      "id": "wwr-849113961752051767",
       "source": "wwr",
       "title": "Creative Marketing Project Coordinator",
       "company": "CapsLock",
@@ -17,10 +17,10 @@
       "tags": [],
       "description": "Headquarters:  Yerevan, Remote, Armenia\n      URL:   http://capslock.global \n \n\n   CapsLock    is a global IT marketing company that pioneers unique, scalable customer acquisition solutions for B2C clients. We solve complex sales challenges across a wide range of industries, primarily for large Nort",
       "posted_at": "Mon, 16 Nov 2026 18:31:50 +0000",
-      "scraped_at": "2026-11-17T05:06:48.389603+00:00"
+      "scraped_at": "2026-11-17T07:00:36.791591+00:00"
     },
     {
-      "id": "eJobs--1699172004705193334",
+      "id": "eJobs--7197295401194784152",
       "source": "eJobs",
       "title": "Contact DSA",
       "company": "—",
@@ -30,11 +30,11 @@
         "PropTech"
       ],
       "description": "",
-      "posted_at": "2026-11-17T05:07:01.918173+00:00",
-      "scraped_at": "2026-11-17T05:07:01.918177+00:00"
+      "posted_at": "2026-11-17T07:00:46.795215+00:00",
+      "scraped_at": "2026-11-17T07:00:46.795219+00:00"
     },
     {
-      "id": "eJobs-7993973065734165858",
+      "id": "eJobs--4465939387580367281",
       "source": "eJobs",
       "title": "Administrează cookie-uri",
       "company": "—",
@@ -44,11 +44,11 @@
         "PropTech"
       ],
       "description": "",
-      "posted_at": "2026-11-17T05:07:01.918158+00:00",
-      "scraped_at": "2026-11-17T05:07:01.918163+00:00"
+      "posted_at": "2026-11-17T07:00:46.795201+00:00",
+      "scraped_at": "2026-11-17T07:00:46.795206+00:00"
     },
     {
-      "id": "eJobs--1911457063722939952",
+      "id": "eJobs-7487375159262989209",
       "source": "eJobs",
       "title": "Despre cookie-uri",
       "company": "—",
@@ -58,11 +58,11 @@
         "PropTech"
       ],
       "description": "",
-      "posted_at": "2026-11-17T05:07:01.918143+00:00",
-      "scraped_at": "2026-11-17T05:07:01.918148+00:00"
+      "posted_at": "2026-11-17T07:00:46.795186+00:00",
+      "scraped_at": "2026-11-17T07:00:46.795190+00:00"
     },
     {
-      "id": "eJobs-312183488935184472",
+      "id": "eJobs--8747424592099623686",
       "source": "eJobs",
       "title": "Acord de confidențialitate",
       "company": "—",
@@ -72,11 +72,11 @@
         "PropTech"
       ],
       "description": "",
-      "posted_at": "2026-11-17T05:07:01.918128+00:00",
-      "scraped_at": "2026-11-17T05:07:01.918133+00:00"
+      "posted_at": "2026-11-17T07:00:46.795171+00:00",
+      "scraped_at": "2026-11-17T07:00:46.795176+00:00"
     },
     {
-      "id": "eJobs--58905473892492222",
+      "id": "eJobs-8545324480268778694",
       "source": "eJobs",
       "title": "Termeni și condiții",
       "company": "—",
@@ -86,11 +86,11 @@
         "PropTech"
       ],
       "description": "",
-      "posted_at": "2026-11-17T05:07:01.918112+00:00",
-      "scraped_at": "2026-11-17T05:07:01.918117+00:00"
+      "posted_at": "2026-11-17T07:00:46.795155+00:00",
+      "scraped_at": "2026-11-17T07:00:46.795160+00:00"
     },
     {
-      "id": "eJobs--1668688212965281561",
+      "id": "eJobs-7761299155643424346",
       "source": "eJobs",
       "title": "Raportează un job",
       "company": "—",
@@ -100,11 +100,11 @@
         "PropTech"
       ],
       "description": "",
-      "posted_at": "2026-11-17T05:07:01.918074+00:00",
-      "scraped_at": "2026-11-17T05:07:01.918095+00:00"
+      "posted_at": "2026-11-17T07:00:46.795116+00:00",
+      "scraped_at": "2026-11-17T07:00:46.795139+00:00"
     },
     {
-      "id": "eJobs--2606500366715892084",
+      "id": "eJobs--2902571237670099696",
       "source": "eJobs",
       "title": "Contact DSA",
       "company": "—",
@@ -114,11 +114,11 @@
         "BIM"
       ],
       "description": "",
-      "posted_at": "2026-11-17T05:06:57.278651+00:00",
-      "scraped_at": "2026-11-17T05:06:57.278656+00:00"
+      "posted_at": "2026-11-17T07:00:43.635795+00:00",
+      "scraped_at": "2026-11-17T07:00:43.635800+00:00"
     },
     {
-      "id": "eJobs-1171730072739467366",
+      "id": "eJobs--5154979293105928279",
       "source": "eJobs",
       "title": "Administrează cookie-uri",
       "company": "—",
@@ -128,11 +128,11 @@
         "BIM"
       ],
       "description": "",
-      "posted_at": "2026-11-17T05:06:57.278636+00:00",
-      "scraped_at": "2026-11-17T05:06:57.278641+00:00"
+      "posted_at": "2026-11-17T07:00:43.635779+00:00",
+      "scraped_at": "2026-11-17T07:00:43.635784+00:00"
     },
     {
-      "id": "eJobs--5307330712579464454",
+      "id": "eJobs--3455514182065943090",
       "source": "eJobs",
       "title": "Despre cookie-uri",
       "company": "—",
@@ -142,11 +142,11 @@
         "BIM"
       ],
       "description": "",
-      "posted_at": "2026-11-17T05:06:57.278620+00:00",
-      "scraped_at": "2026-11-17T05:06:57.278624+00:00"
+      "posted_at": "2026-11-17T07:00:43.635764+00:00",
+      "scraped_at": "2026-11-17T07:00:43.635768+00:00"
     },
     {
-      "id": "eJobs-3565572145079942196",
+      "id": "eJobs--1777970817413217719",
       "source": "eJobs",
       "title": "Acord de confidențialitate",
       "company": "—",
@@ -156,11 +156,11 @@
         "BIM"
       ],
       "description": "",
-      "posted_at": "2026-11-17T05:06:57.278605+00:00",
-      "scraped_at": "2026-11-17T05:06:57.278610+00:00"
+      "posted_at": "2026-11-17T07:00:43.635749+00:00",
+      "scraped_at": "2026-11-17T07:00:43.635754+00:00"
     },
     {
-      "id": "eJobs-9168583293797850465",
+      "id": "eJobs--8815312302413874248",
       "source": "eJobs",
       "title": "Termeni și condiții",
       "company": "—",
@@ -170,11 +170,11 @@
         "BIM"
       ],
       "description": "",
-      "posted_at": "2026-11-17T05:06:57.278588+00:00",
-      "scraped_at": "2026-11-17T05:06:57.278593+00:00"
+      "posted_at": "2026-11-17T07:00:43.635734+00:00",
+      "scraped_at": "2026-11-17T07:00:43.635738+00:00"
     },
     {
-      "id": "eJobs-5315284786252809959",
+      "id": "eJobs-7943071444097109153",
       "source": "eJobs",
       "title": "Raportează un job",
       "company": "—",
@@ -184,11 +184,11 @@
         "BIM"
       ],
       "description": "",
-      "posted_at": "2026-11-17T05:06:57.278572+00:00",
-      "scraped_at": "2026-11-17T05:06:57.278576+00:00"
+      "posted_at": "2026-11-17T07:00:43.635717+00:00",
+      "scraped_at": "2026-11-17T07:00:43.635721+00:00"
     },
     {
-      "id": "eJobs--4698661187660435423",
+      "id": "eJobs--1118218035690312555",
       "source": "eJobs",
       "title": "Joburi în străinătate",
       "company": "—",
@@ -198,11 +198,11 @@
         "BIM"
       ],
       "description": "",
-      "posted_at": "2026-11-17T05:06:57.278556+00:00",
-      "scraped_at": "2026-11-17T05:06:57.278561+00:00"
+      "posted_at": "2026-11-17T07:00:43.635701+00:00",
+      "scraped_at": "2026-11-17T07:00:43.635706+00:00"
     },
     {
-      "id": "eJobs--3657671085290804025",
+      "id": "eJobs--2038918973753305928",
       "source": "eJobs",
       "title": "Locuri de muncă remote",
       "company": "—",
@@ -212,11 +212,11 @@
         "BIM"
       ],
       "description": "",
-      "posted_at": "2026-11-17T05:06:57.278539+00:00",
-      "scraped_at": "2026-11-17T05:06:57.278545+00:00"
+      "posted_at": "2026-11-17T07:00:43.635685+00:00",
+      "scraped_at": "2026-11-17T07:00:43.635690+00:00"
     },
     {
-      "id": "eJobs-7227465812460916800",
+      "id": "eJobs--4350306200374436072",
       "source": "eJobs",
       "title": "Joburi cu salarii afișate",
       "company": "—",
@@ -226,11 +226,11 @@
         "BIM"
       ],
       "description": "",
-      "posted_at": "2026-11-17T05:06:57.278520+00:00",
-      "scraped_at": "2026-11-17T05:06:57.278526+00:00"
+      "posted_at": "2026-11-17T07:00:43.635667+00:00",
+      "scraped_at": "2026-11-17T07:00:43.635673+00:00"
     },
     {
-      "id": "eJobs--6838754558858284056",
+      "id": "eJobs--5423229143911096101",
       "source": "eJobs",
       "title": "Vezi toate joburile",
       "company": "—",
@@ -240,8 +240,8 @@
         "BIM"
       ],
       "description": "",
-      "posted_at": "2026-11-17T05:06:57.278471+00:00",
-      "scraped_at": "2026-11-17T05:06:57.278494+00:00"
+      "posted_at": "2026-11-17T07:00:43.635619+00:00",
+      "scraped_at": "2026-11-17T07:00:43.635642+00:00"
     },
     {
       "id": "remoteok-1137709",
@@ -260,7 +260,7 @@
       ],
       "description": "<p style=\"min-height:1.5em\"><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://www.allarahealth.com\"><strong>Allara</strong></a> is a comprehensive womenâs health provider that specializes in expert, longitudinal care that supports women through every life stage. Trusted by thousands of women nationwide, Allara makes expert healthcare accessible by connecting patients with multidisciplinary care teams that have a deep understanding of hormonal, metabolic, and reproductive care",
       "posted_at": "2026-11-09T16:00:06+00:00",
-      "scraped_at": "2026-11-17T05:06:42.493720+00:00"
+      "scraped_at": "2026-11-17T07:00:32.549348+00:00"
     },
     {
       "id": "remoteok-1137194",
@@ -283,7 +283,7 @@
       ],
       "description": "Apply<br /><br /><strong>Description<br /><br /></strong><strong>Job Summary:<br /><br /></strong>The BESS Project Scheduler is responsible for developing, maintaining, and analyzing detailed project schedules for Battery Energy Storage System (BESS) projects. This role plays a critical part in ensuring projects are delivered on time by providing accurate schedule forecasts, identifying risks, and supporting project teams with data-driven insights across engineering, procurement, construction, c",
       "posted_at": "2026-08-25T21:34:13+00:00",
-      "scraped_at": "2026-11-17T05:06:42.503660+00:00"
+      "scraped_at": "2026-11-17T07:00:32.558647+00:00"
     }
   ]
 }
