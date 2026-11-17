@@ -38,8 +38,8 @@ KEYWORDS_DEFAULT = [
 ]
 
 REMOTE_OK_API = "https://remoteok.com/api"
-HIMALAYAS_API = "https://himalayas.app/api/v1/jobs"
 WWR_RSS = "https://weworkremotely.com/remote-jobs.rss"
+EJOBS_SEARCH = "https://www.ejobs.ro/locuri-de-munca?q="
 
 OUTPUT_FILE = os.path.join(os.path.dirname(__file__), "jobs.json")
 DASHBOARD_REPO = os.path.join(os.path.dirname(__file__), "..", "..", "projects", "jobactiv")
@@ -128,42 +128,9 @@ def scrape_remoteok(keywords):
     print(f"  [OK] RemoteOK: {len(results)} joburi găsite")
     return results
 
-# === Himalayas ===
+# === Himalayas (dezactivat — API vechi 404) ===
 def scrape_himalayas(keywords):
-    """Himalayas API JSON gratuit."""
-    print("[Himalayas] Fetching API...")
-    data = fetch_url(HIMALAYAS_API)
-    if not data:
-        return []
-    try:
-        parsed = json.loads(data)
-    except json.JSONDecodeError:
-        print("  [ERR] Himalayas: JSON parse failed")
-        return []
-    
-    jobs_raw = parsed.get("jobs", []) if isinstance(parsed, dict) else parsed
-    results = []
-    for job in jobs_raw:
-        if not isinstance(job, dict):
-            continue
-        title = job.get("title") or job.get("position") or ""
-        company = job.get("company_name") or job.get("company", {}).get("name", "") if isinstance(job.get("company"), dict) else job.get("company", "")
-        desc = job.get("description") or ""
-        tags = job.get("tags", [])
-        if isinstance(tags, str):
-            tags = [t.strip() for t in tags.split(",")]
-        url = job.get("url") or job.get("apply_url") or ""
-        location = job.get("location") or "Remote"
-        posted = job.get("posted_at") or job.get("date")
-        
-        full_text = f"{title} {company} {desc} {' '.join(tags)}"
-        if matches_keywords(full_text, keywords):
-            results.append(normalize_job(
-                "himalayas", job.get("id", ""), title, company, url,
-                location, tags, desc, posted
-            ))
-    print(f"  [OK] Himalayas: {len(results)} joburi găsite")
-    return results
+    return []
 
 # === We Work Remotely (RSS) ===
 def scrape_wwr(keywords):
@@ -235,6 +202,33 @@ def scrape_bestjobs(keywords):
     print(f"  [OK] Bestjobs: {len(results)} joburi găsite")
     return results
 
+# === eJobs.ro (HTML scrape) ===
+def scrape_ejobs(keywords):
+    """eJobs.ro — căutare HTML, filtrează după keywords."""
+    print("[eJobs] Fetching...")
+    results = []
+    for kw in ["tehnologie constructii", "project manager constructii", "BIM", "digitalizare constructii", "PropTech", "automatizare"]:
+        search_url = EJOBS_SEARCH + urllib.parse.quote(kw)
+        data = fetch_url(search_url)
+        if not data:
+            continue
+        # linkuri către anunțuri: /locuri-de-munca/... sau /job/...
+        job_pattern = r'href="(/(?:locuri-de-munca|job)[^"]*)"[^>]*>([^<]{5,120})'
+        for url_path, title in re.findall(job_pattern, data, re.IGNORECASE):
+            full_url = "https://www.ejobs.ro" + url_path
+            title = title.strip()
+            if full_url in {r["url"] for r in results}:
+                continue
+            full_text = f"{title} {kw}"
+            if matches_keywords(full_text, keywords) or kw.lower() in ["bim", "proptech"]:
+                results.append(normalize_job(
+                    "eJobs", hash(full_url), title, "", full_url,
+                    "Romania", [kw], "", ""
+                ))
+        time.sleep(1)
+    print(f"  [OK] eJobs: {len(results)} joburi găsite")
+    return results
+
 # === Main ===
 def main():
     keywords = KEYWORDS_DEFAULT
@@ -278,6 +272,14 @@ def main():
         all_jobs.extend(scrape_bestjobs(keywords))
     except Exception as e:
         print(f"  [ERR] Bestjobs: {e}")
+
+    time.sleep(1)
+
+    # eJobs.ro
+    try:
+        all_jobs.extend(scrape_ejobs(keywords))
+    except Exception as e:
+        print(f"  [ERR] eJobs: {e}")
     
     # Deduplicate by URL
     seen_urls = set()

@@ -1,13 +1,14 @@
 {
-  "last_updated": "2026-11-17T05:02:37.801309+00:00",
-  "total_jobs": 3,
+  "last_updated": "2026-11-17T05:07:04.624428+00:00",
+  "total_jobs": 19,
   "sources": [
-    "wwr",
-    "remoteok"
+    "eJobs",
+    "remoteok",
+    "wwr"
   ],
   "jobs": [
     {
-      "id": "wwr-905371401572790318",
+      "id": "wwr-2544390533642982427",
       "source": "wwr",
       "title": "Creative Marketing Project Coordinator",
       "company": "CapsLock",
@@ -16,7 +17,231 @@
       "tags": [],
       "description": "Headquarters:  Yerevan, Remote, Armenia\n      URL:   http://capslock.global \n \n\n   CapsLock    is a global IT marketing company that pioneers unique, scalable customer acquisition solutions for B2C clients. We solve complex sales challenges across a wide range of industries, primarily for large Nort",
       "posted_at": "Mon, 16 Nov 2026 18:31:50 +0000",
-      "scraped_at": "2026-11-17T05:02:36.060592+00:00"
+      "scraped_at": "2026-11-17T05:06:48.389603+00:00"
+    },
+    {
+      "id": "eJobs--1699172004705193334",
+      "source": "eJobs",
+      "title": "Contact DSA",
+      "company": "—",
+      "url": "https://www.ejobs.ro/locuri-de-munca?q=PropTech#dsaContact",
+      "location": "Romania",
+      "tags": [
+        "PropTech"
+      ],
+      "description": "",
+      "posted_at": "2026-11-17T05:07:01.918173+00:00",
+      "scraped_at": "2026-11-17T05:07:01.918177+00:00"
+    },
+    {
+      "id": "eJobs-7993973065734165858",
+      "source": "eJobs",
+      "title": "Administrează cookie-uri",
+      "company": "—",
+      "url": "https://www.ejobs.ro/locuri-de-munca?q=PropTech#cookies",
+      "location": "Romania",
+      "tags": [
+        "PropTech"
+      ],
+      "description": "",
+      "posted_at": "2026-11-17T05:07:01.918158+00:00",
+      "scraped_at": "2026-11-17T05:07:01.918163+00:00"
+    },
+    {
+      "id": "eJobs--1911457063722939952",
+      "source": "eJobs",
+      "title": "Despre cookie-uri",
+      "company": "—",
+      "url": "https://www.ejobs.ro/locuri-de-munca?q=PropTech#cookies-policy",
+      "location": "Romania",
+      "tags": [
+        "PropTech"
+      ],
+      "description": "",
+      "posted_at": "2026-11-17T05:07:01.918143+00:00",
+      "scraped_at": "2026-11-17T05:07:01.918148+00:00"
+    },
+    {
+      "id": "eJobs-312183488935184472",
+      "source": "eJobs",
+      "title": "Acord de confidențialitate",
+      "company": "—",
+      "url": "https://www.ejobs.ro/locuri-de-munca?q=PropTech#privacy-policy",
+      "location": "Romania",
+      "tags": [
+        "PropTech"
+      ],
+      "description": "",
+      "posted_at": "2026-11-17T05:07:01.918128+00:00",
+      "scraped_at": "2026-11-17T05:07:01.918133+00:00"
+    },
+    {
+      "id": "eJobs--58905473892492222",
+      "source": "eJobs",
+      "title": "Termeni și condiții",
+      "company": "—",
+      "url": "https://www.ejobs.ro/locuri-de-munca?q=PropTech#terms",
+      "location": "Romania",
+      "tags": [
+        "PropTech"
+      ],
+      "description": "",
+      "posted_at": "2026-11-17T05:07:01.918112+00:00",
+      "scraped_at": "2026-11-17T05:07:01.918117+00:00"
+    },
+    {
+      "id": "eJobs--1668688212965281561",
+      "source": "eJobs",
+      "title": "Raportează un job",
+      "company": "—",
+      "url": "https://www.ejobs.ro/locuri-de-munca?q=PropTech#report-job",
+      "location": "Romania",
+      "tags": [
+        "PropTech"
+      ],
+      "description": "",
+      "posted_at": "2026-11-17T05:07:01.918074+00:00",
+      "scraped_at": "2026-11-17T05:07:01.918095+00:00"
+    },
+    {
+      "id": "eJobs--2606500366715892084",
+      "source": "eJobs",
+      "title": "Contact DSA",
+      "company": "—",
+      "url": "https://www.ejobs.ro/locuri-de-munca?q=BIM#dsaContact",
+      "location": "Romania",
+      "tags": [
+        "BIM"
+      ],
+      "description": "",
+      "posted_at": "2026-11-17T05:06:57.278651+00:00",
+      "scraped_at": "2026-11-17T05:06:57.278656+00:00"
+    },
+    {
+      "id": "eJobs-1171730072739467366",
+      "source": "eJobs",
+      "title": "Administrează cookie-uri",
+      "company": "—",
+      "url": "https://www.ejobs.ro/locuri-de-munca?q=BIM#cookies",
+      "location": "Romania",
+      "tags": [
+        "BIM"
+      ],
+      "description": "",
+      "posted_at": "2026-11-17T05:06:57.278636+00:00",
+      "scraped_at": "2026-11-17T05:06:57.278641+00:00"
+    },
+    {
+      "id": "eJobs--5307330712579464454",
+      "source": "eJobs",
+      "title": "Despre cookie-uri",
+      "company": "—",
+      "url": "https://www.ejobs.ro/locuri-de-munca?q=BIM#cookies-policy",
+      "location": "Romania",
+      "tags": [
+        "BIM"
+      ],
+      "description": "",
+      "posted_at": "2026-11-17T05:06:57.278620+00:00",
+      "scraped_at": "2026-11-17T05:06:57.278624+00:00"
+    },
+    {
+      "id": "eJobs-3565572145079942196",
+      "source": "eJobs",
+      "title": "Acord de confidențialitate",
+      "company": "—",
+      "url": "https://www.ejobs.ro/locuri-de-munca?q=BIM#privacy-policy",
+      "location": "Romania",
+      "tags": [
+        "BIM"
+      ],
+      "description": "",
+      "posted_at": "2026-11-17T05:06:57.278605+00:00",
+      "scraped_at": "2026-11-17T05:06:57.278610+00:00"
+    },
+    {
+      "id": "eJobs-9168583293797850465",
+      "source": "eJobs",
+      "title": "Termeni și condiții",
+      "company": "—",
+      "url": "https://www.ejobs.ro/locuri-de-munca?q=BIM#terms",
+      "location": "Romania",
+      "tags": [
+        "BIM"
+      ],
+      "description": "",
+      "posted_at": "2026-11-17T05:06:57.278588+00:00",
+      "scraped_at": "2026-11-17T05:06:57.278593+00:00"
+    },
+    {
+      "id": "eJobs-5315284786252809959",
+      "source": "eJobs",
+      "title": "Raportează un job",
+      "company": "—",
+      "url": "https://www.ejobs.ro/locuri-de-munca?q=BIM#report-job",
+      "location": "Romania",
+      "tags": [
+        "BIM"
+      ],
+      "description": "",
+      "posted_at": "2026-11-17T05:06:57.278572+00:00",
+      "scraped_at": "2026-11-17T05:06:57.278576+00:00"
+    },
+    {
+      "id": "eJobs--4698661187660435423",
+      "source": "eJobs",
+      "title": "Joburi în străinătate",
+      "company": "—",
+      "url": "https://www.ejobs.ro/locuri-de-munca/strainatate",
+      "location": "Romania",
+      "tags": [
+        "BIM"
+      ],
+      "description": "",
+      "posted_at": "2026-11-17T05:06:57.278556+00:00",
+      "scraped_at": "2026-11-17T05:06:57.278561+00:00"
+    },
+    {
+      "id": "eJobs--3657671085290804025",
+      "source": "eJobs",
+      "title": "Locuri de muncă remote",
+      "company": "—",
+      "url": "https://www.ejobs.ro/locuri-de-munca/remote",
+      "location": "Romania",
+      "tags": [
+        "BIM"
+      ],
+      "description": "",
+      "posted_at": "2026-11-17T05:06:57.278539+00:00",
+      "scraped_at": "2026-11-17T05:06:57.278545+00:00"
+    },
+    {
+      "id": "eJobs-7227465812460916800",
+      "source": "eJobs",
+      "title": "Joburi cu salarii afișate",
+      "company": "—",
+      "url": "https://www.ejobs.ro/locuri-de-munca/salarii",
+      "location": "Romania",
+      "tags": [
+        "BIM"
+      ],
+      "description": "",
+      "posted_at": "2026-11-17T05:06:57.278520+00:00",
+      "scraped_at": "2026-11-17T05:06:57.278526+00:00"
+    },
+    {
+      "id": "eJobs--6838754558858284056",
+      "source": "eJobs",
+      "title": "Vezi toate joburile",
+      "company": "—",
+      "url": "https://www.ejobs.ro/locuri-de-munca",
+      "location": "Romania",
+      "tags": [
+        "BIM"
+      ],
+      "description": "",
+      "posted_at": "2026-11-17T05:06:57.278471+00:00",
+      "scraped_at": "2026-11-17T05:06:57.278494+00:00"
     },
     {
       "id": "remoteok-1137709",
@@ -35,7 +260,7 @@
       ],
       "description": "<p style=\"min-height:1.5em\"><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://www.allarahealth.com\"><strong>Allara</strong></a> is a comprehensive womenâs health provider that specializes in expert, longitudinal care that supports women through every life stage. Trusted by thousands of women nationwide, Allara makes expert healthcare accessible by connecting patients with multidisciplinary care teams that have a deep understanding of hormonal, metabolic, and reproductive care",
       "posted_at": "2026-11-09T16:00:06+00:00",
-      "scraped_at": "2026-11-17T05:02:30.194522+00:00"
+      "scraped_at": "2026-11-17T05:06:42.493720+00:00"
     },
     {
       "id": "remoteok-1137194",
@@ -58,7 +283,7 @@
       ],
       "description": "Apply<br /><br /><strong>Description<br /><br /></strong><strong>Job Summary:<br /><br /></strong>The BESS Project Scheduler is responsible for developing, maintaining, and analyzing detailed project schedules for Battery Energy Storage System (BESS) projects. This role plays a critical part in ensuring projects are delivered on time by providing accurate schedule forecasts, identifying risks, and supporting project teams with data-driven insights across engineering, procurement, construction, c",
       "posted_at": "2026-08-25T21:34:13+00:00",
-      "scraped_at": "2026-11-17T05:02:30.213092+00:00"
+      "scraped_at": "2026-11-17T05:06:42.503660+00:00"
     }
   ]
 }
