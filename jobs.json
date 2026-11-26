@@ -1,233 +1,135 @@
 {
-  "last_updated": "2026-11-25T07:00:45.815537+00:00",
-  "total_jobs": 16,
+  "last_updated": "2026-11-26T05:06:51.021897+00:00",
+  "total_jobs": 9,
   "sources": [
     "eJobs"
   ],
   "jobs": [
     {
-      "id": "eJobs--3142896553210563856",
+      "id": "eJobs-99257607",
       "source": "eJobs",
-      "title": "Contact DSA",
+      "title": "Coordonator Financiar Contabil Administrativ",
       "company": "—",
-      "url": "https://www.ejobs.ro/locuri-de-munca?q=PropTech#dsaContact",
+      "url": "https://www.ejobs.ro/user/locuri-de-munca/coordonator-financiar-contabil-administrativ/99257607",
       "location": "Romania",
       "tags": [
-        "PropTech"
+        "constructii"
       ],
       "description": "",
-      "posted_at": "2026-11-25T07:00:43.141570+00:00",
-      "scraped_at": "2026-11-25T07:00:43.141575+00:00"
+      "posted_at": "2026-11-26T05:06:23.636909+00:00",
+      "scraped_at": "2026-11-26T05:06:23.636914+00:00"
     },
     {
-      "id": "eJobs--8929533376678325918",
+      "id": "eJobs-99257623",
       "source": "eJobs",
-      "title": "Administrează cookie-uri",
+      "title": "Electromecanic Electronist Service Si Mentenanta Utilaje",
       "company": "—",
-      "url": "https://www.ejobs.ro/locuri-de-munca?q=PropTech#cookies",
+      "url": "https://www.ejobs.ro/user/locuri-de-munca/electromecanic-electronist-service-si-mentenanta-utilaje/99257623",
       "location": "Romania",
       "tags": [
-        "PropTech"
+        "constructii"
       ],
       "description": "",
-      "posted_at": "2026-11-25T07:00:43.141556+00:00",
-      "scraped_at": "2026-11-25T07:00:43.141561+00:00"
+      "posted_at": "2026-11-26T05:06:23.636886+00:00",
+      "scraped_at": "2026-11-26T05:06:23.636892+00:00"
     },
     {
-      "id": "eJobs-6061697857306613795",
+      "id": "eJobs-99258295",
       "source": "eJobs",
-      "title": "Despre cookie-uri",
+      "title": "Business Development Specialist Proiecte Electrice",
       "company": "—",
-      "url": "https://www.ejobs.ro/locuri-de-munca?q=PropTech#cookies-policy",
+      "url": "https://www.ejobs.ro/user/locuri-de-munca/business-development-specialist-proiecte-electrice/99258295",
       "location": "Romania",
       "tags": [
-        "PropTech"
+        "constructii"
       ],
       "description": "",
-      "posted_at": "2026-11-25T07:00:43.141541+00:00",
-      "scraped_at": "2026-11-25T07:00:43.141546+00:00"
+      "posted_at": "2026-11-26T05:06:23.636823+00:00",
+      "scraped_at": "2026-11-26T05:06:23.636831+00:00"
     },
     {
-      "id": "eJobs--8793799345462402673",
+      "id": "eJobs-99257856",
       "source": "eJobs",
-      "title": "Acord de confidențialitate",
+      "title": "Mecanic Electromecanic Intretinere Si Reparatii Utilaje",
       "company": "—",
-      "url": "https://www.ejobs.ro/locuri-de-munca?q=PropTech#privacy-policy",
+      "url": "https://www.ejobs.ro/user/locuri-de-munca/mecanic-electromecanic-intretinere-si-reparatii-utilaje/99257856",
       "location": "Romania",
       "tags": [
-        "PropTech"
+        "constructii"
       ],
       "description": "",
-      "posted_at": "2026-11-25T07:00:43.141527+00:00",
-      "scraped_at": "2026-11-25T07:00:43.141531+00:00"
+      "posted_at": "2026-11-26T05:06:23.636729+00:00",
+      "scraped_at": "2026-11-26T05:06:23.636748+00:00"
     },
     {
-      "id": "eJobs--2167394329056428203",
+      "id": "eJobs-99265018",
       "source": "eJobs",
-      "title": "Termeni și condiții",
+      "title": "Responsabil Calitate Senior Locatie Oradea",
       "company": "—",
-      "url": "https://www.ejobs.ro/locuri-de-munca?q=PropTech#terms",
+      "url": "https://www.ejobs.ro/user/locuri-de-munca/responsabil-calitate-senior-locatie-oradea/99265018",
       "location": "Romania",
       "tags": [
-        "PropTech"
+        "constructii"
       ],
       "description": "",
-      "posted_at": "2026-11-25T07:00:43.141510+00:00",
-      "scraped_at": "2026-11-25T07:00:43.141515+00:00"
+      "posted_at": "2026-11-26T05:06:23.636670+00:00",
+      "scraped_at": "2026-11-26T05:06:23.636684+00:00"
     },
     {
-      "id": "eJobs--7508553628835960422",
+      "id": "eJobs-99258309",
       "source": "eJobs",
-      "title": "Raportează un job",
+      "title": "Electrician Electromecanic",
       "company": "—",
-      "url": "https://www.ejobs.ro/locuri-de-munca?q=PropTech#report-job",
+      "url": "https://www.ejobs.ro/user/locuri-de-munca/electrician-electromecanic/99258309",
       "location": "Romania",
       "tags": [
-        "PropTech"
+        "constructii"
       ],
       "description": "",
-      "posted_at": "2026-11-25T07:00:43.141472+00:00",
-      "scraped_at": "2026-11-25T07:00:43.141493+00:00"
+      "posted_at": "2026-11-26T05:06:23.636561+00:00",
+      "scraped_at": "2026-11-26T05:06:23.636574+00:00"
     },
     {
-      "id": "eJobs--5472436977281755991",
+      "id": "eJobs-99271552",
       "source": "eJobs",
-      "title": "Contact DSA",
+      "title": "Tehnician Instalator Sisteme De Inchidere",
       "company": "—",
-      "url": "https://www.ejobs.ro/locuri-de-munca?q=BIM#dsaContact",
+      "url": "https://www.ejobs.ro/user/locuri-de-munca/tehnician-instalator-sisteme-de-inchidere/99271552",
       "location": "Romania",
       "tags": [
-        "BIM"
+        "constructii"
       ],
       "description": "",
-      "posted_at": "2026-11-25T07:00:39.799541+00:00",
-      "scraped_at": "2026-11-25T07:00:39.799550+00:00"
+      "posted_at": "2026-11-26T05:06:23.636457+00:00",
+      "scraped_at": "2026-11-26T05:06:23.636486+00:00"
     },
     {
-      "id": "eJobs--3180495221528120397",
+      "id": "eJobs-99273372",
       "source": "eJobs",
-      "title": "Administrează cookie-uri",
+      "title": "Tehnician Teren Stivuitoare",
       "company": "—",
-      "url": "https://www.ejobs.ro/locuri-de-munca?q=BIM#cookies",
+      "url": "https://www.ejobs.ro/user/locuri-de-munca/tehnician-teren-stivuitoare/99273372",
       "location": "Romania",
       "tags": [
-        "BIM"
+        "constructii"
       ],
       "description": "",
-      "posted_at": "2026-11-25T07:00:39.799513+00:00",
-      "scraped_at": "2026-11-25T07:00:39.799523+00:00"
+      "posted_at": "2026-11-26T05:06:23.636274+00:00",
+      "scraped_at": "2026-11-26T05:06:23.636292+00:00"
     },
     {
-      "id": "eJobs--1959937476993754395",
+      "id": "eJobs-99262334",
       "source": "eJobs",
-      "title": "Despre cookie-uri",
+      "title": "Sales Manager Pv Bess M F D",
       "company": "—",
-      "url": "https://www.ejobs.ro/locuri-de-munca?q=BIM#cookies-policy",
+      "url": "https://www.ejobs.ro/user/locuri-de-munca/sales-manager-pv-bess-m-f-d/99262334",
       "location": "Romania",
       "tags": [
-        "BIM"
+        "constructii"
       ],
       "description": "",
-      "posted_at": "2026-11-25T07:00:39.799484+00:00",
-      "scraped_at": "2026-11-25T07:00:39.799492+00:00"
-    },
-    {
-      "id": "eJobs-352564037797666838",
-      "source": "eJobs",
-      "title": "Acord de confidențialitate",
-      "company": "—",
-      "url": "https://www.ejobs.ro/locuri-de-munca?q=BIM#privacy-policy",
-      "location": "Romania",
-      "tags": [
-        "BIM"
-      ],
-      "description": "",
-      "posted_at": "2026-11-25T07:00:39.799457+00:00",
-      "scraped_at": "2026-11-25T07:00:39.799465+00:00"
-    },
-    {
-      "id": "eJobs--1574617730552011084",
-      "source": "eJobs",
-      "title": "Termeni și condiții",
-      "company": "—",
-      "url": "https://www.ejobs.ro/locuri-de-munca?q=BIM#terms",
-      "location": "Romania",
-      "tags": [
-        "BIM"
-      ],
-      "description": "",
-      "posted_at": "2026-11-25T07:00:39.799429+00:00",
-      "scraped_at": "2026-11-25T07:00:39.799438+00:00"
-    },
-    {
-      "id": "eJobs--22133785686731055",
-      "source": "eJobs",
-      "title": "Raportează un job",
-      "company": "—",
-      "url": "https://www.ejobs.ro/locuri-de-munca?q=BIM#report-job",
-      "location": "Romania",
-      "tags": [
-        "BIM"
-      ],
-      "description": "",
-      "posted_at": "2026-11-25T07:00:39.799400+00:00",
-      "scraped_at": "2026-11-25T07:00:39.799409+00:00"
-    },
-    {
-      "id": "eJobs--4539623010557487587",
-      "source": "eJobs",
-      "title": "Joburi în străinătate",
-      "company": "—",
-      "url": "https://www.ejobs.ro/locuri-de-munca/strainatate",
-      "location": "Romania",
-      "tags": [
-        "BIM"
-      ],
-      "description": "",
-      "posted_at": "2026-11-25T07:00:39.799371+00:00",
-      "scraped_at": "2026-11-25T07:00:39.799380+00:00"
-    },
-    {
-      "id": "eJobs--5133846503875567797",
-      "source": "eJobs",
-      "title": "Locuri de muncă remote",
-      "company": "—",
-      "url": "https://www.ejobs.ro/locuri-de-munca/remote",
-      "location": "Romania",
-      "tags": [
-        "BIM"
-      ],
-      "description": "",
-      "posted_at": "2026-11-25T07:00:39.799342+00:00",
-      "scraped_at": "2026-11-25T07:00:39.799351+00:00"
-    },
-    {
-      "id": "eJobs-8632540322219982649",
-      "source": "eJobs",
-      "title": "Joburi cu salarii afișate",
-      "company": "—",
-      "url": "https://www.ejobs.ro/locuri-de-munca/salarii",
-      "location": "Romania",
-      "tags": [
-        "BIM"
-      ],
-      "description": "",
-      "posted_at": "2026-11-25T07:00:39.799308+00:00",
-      "scraped_at": "2026-11-25T07:00:39.799319+00:00"
-    },
-    {
-      "id": "eJobs-1624920080891842627",
-      "source": "eJobs",
-      "title": "Vezi toate joburile",
-      "company": "—",
-      "url": "https://www.ejobs.ro/locuri-de-munca",
-      "location": "Romania",
-      "tags": [
-        "BIM"
-      ],
-      "description": "",
-      "posted_at": "2026-11-25T07:00:39.799243+00:00",
-      "scraped_at": "2026-11-25T07:00:39.799273+00:00"
+      "posted_at": "2026-11-26T05:06:23.636182+00:00",
+      "scraped_at": "2026-11-26T05:06:23.636226+00:00"
     }
   ]
 }

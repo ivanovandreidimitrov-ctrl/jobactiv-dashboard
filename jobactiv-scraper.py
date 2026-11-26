@@ -45,7 +45,9 @@ OUTPUT_FILE = os.path.join(os.path.dirname(__file__), "jobs.json")
 DASHBOARD_REPO = os.path.join(os.path.dirname(__file__), "..", "..", "projects", "jobactiv")
 
 HEADERS = {
-    "User-Agent": "Mozilla/5.0 (JobActiv-Scraper/1.0; +https://github.com/ivanovandreidimitrov-ctrl)"
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+    "Accept-Language": "ro-RO,ro;q=0.9,en;q=0.8",
 }
 
 def fetch_url(url, timeout=15):
@@ -174,59 +176,81 @@ def scrape_wwr(keywords):
     print(f"  [OK] WWR: {len(results)} joburi găsite")
     return results
 
-# === Bestjobs (HTML scrape — simplificat) ===
+# === Bestjobs (HTML scrape — reparat 2026-11-26) ===
 def scrape_bestjobs(keywords):
-    """Bestjobs — scrapare simplă HTML."""
+    """Bestjobs — caută pe pagina corectă de căutare."""
     print("[Bestjobs] Fetching...")
     results = []
-    search_url = "https://www.bestjobs.eu/jobs?q=" + urllib.parse.quote("construction technology")
-    data = fetch_url(search_url)
-    if not data:
-        return []
-    
-    # Extrage job-uri din HTML (pattern simplu)
-    # Caută link-uri către pagini de joburi
-    job_pattern = r'href="(/ro/[^"]*job[^"]*)"[^>]*>([^<]*)'
-    matches = re.findall(job_pattern, data, re.IGNORECASE)
+    queries = ["constructii", "BIM", "project manager", "tehnologie constructii"]
     seen = set()
-    for url_path, title in matches[:20]:
-        full_url = "https://www.bestjobs.eu" + url_path
-        if full_url in seen:
-            continue
-        seen.add(full_url)
-        if matches_keywords(title, keywords):
-            results.append(normalize_job(
-                "bestjobs", hash(full_url), title.strip(), "", full_url,
-                "EU", [], "", ""
-            ))
-    print(f"  [OK] Bestjobs: {len(results)} joburi găsite")
-    return results
-
-# === eJobs.ro (HTML scrape) ===
-def scrape_ejobs(keywords):
-    """eJobs.ro — căutare HTML, filtrează după keywords."""
-    print("[eJobs] Fetching...")
-    results = []
-    for kw in ["tehnologie constructii", "project manager constructii", "BIM", "digitalizare constructii", "PropTech", "automatizare"]:
-        search_url = EJOBS_SEARCH + urllib.parse.quote(kw)
+    for q in queries:
+        # URL corect de căutare Bestjobs
+        search_url = "https://www.bestjobs.ro/locuri-de-munca?q=" + urllib.parse.quote(q)
         data = fetch_url(search_url)
         if not data:
             continue
-        # linkuri către anunțuri: /locuri-de-munca/... sau /job/...
-        job_pattern = r'href="(/(?:locuri-de-munca|job)[^"]*)"[^>]*>([^<]{5,120})'
-        for url_path, title in re.findall(job_pattern, data, re.IGNORECASE):
-            full_url = "https://www.ejobs.ro" + url_path
-            title = title.strip()
-            if full_url in {r["url"] for r in results}:
+        # Linkuri către anunțuri: /locuri-de-munca/{slug}/{id} sau /job/{slug}/{id}
+        job_pattern = r'href="(/locuri-de-munca/[a-z0-9-]+/\d+|/[a-z-]*job[a-z-]*/[a-z0-9-]+/\d+)"'
+        for url_path in re.findall(job_pattern, data, re.IGNORECASE):
+            full_url = "https://www.bestjobs.ro" + url_path
+            if full_url in seen:
                 continue
-            full_text = f"{title} {kw}"
-            if matches_keywords(full_text, keywords) or kw.lower() in ["bim", "proptech"]:
+            seen.add(full_url)
+            slug = url_path.split("/")[-2] if "/" in url_path else url_path
+            title = slug.replace("-", " ").title()
+            full_text = f"{title} {q}"
+            if matches_keywords(full_text, keywords) or q.lower() in ["bim", "constructii"]:
                 results.append(normalize_job(
-                    "eJobs", hash(full_url), title, "", full_url,
-                    "Romania", [kw], "", ""
+                    "bestjobs", url_path.split("/")[-1], title, "", full_url,
+                    "Romania", [q], "", ""
                 ))
         time.sleep(1)
-    print(f"  [OK] eJobs: {len(results)} joburi găsite")
+    print(f"  [OK] Bestjobs: {len(results)} joburi găsite")
+    return results
+
+# === eJobs.ro (HTML scrape — reparat 2026-11-26) ===
+def scrape_ejobs(keywords):
+    """eJobs.ro — pattern corect: /user/locuri-de-munca/{slug}/{id}."""
+    print("[eJobs] Fetching...")
+    results = []
+    seen = set()
+    # Căutări relevante pentru profilul Andrei
+    queries = [
+        "constructii", "BIM", "project manager constructii", "tehnologie constructii",
+        "digitalizare constructii", "site manager", "coordonator santier",
+        "inginer constructii", "tehnician BIM", "AutoCAD", "Revit",
+        "sef santier", "diriginte santier", "desenator tehnic", "topograf"
+    ]
+    RELEVANT = ["construct", "bim", "santier", "inginer", "tehnician", "tehnic",
+                "coordonator", "manager", "proiect", "desenator", "topograf", "sef", "diriginte",
+                "instalator", "electrician", "mecanic", "calitate", "pv", "solar", "fotovoltaic",
+                "automatizare", "digital", "autocad", "revit", "cad", "arhitect"]
+    EXCLUDE = ["verkaufer", "lehrling", "mitarbeiter", "spar", "kassa", "feinkost", "pizza",
+               "crupier", "game", "cabin crew", "emirates", "broker asigurare", "consilier juridic",
+               "avocat", "medical", "asistent medical", "sap", "german"]
+    for kw in queries:
+        search_url = EJOBS_SEARCH + urllib.parse.quote(kw)
+        data = fetch_url(search_url, timeout=20)
+        if not data:
+            continue
+        job_pattern = r'/user/locuri-de-munca/([a-z0-9-]+)/(\d+)'
+        for slug, job_id in re.findall(job_pattern, data):
+            full_url = f"https://www.ejobs.ro/user/locuri-de-munca/{slug}/{job_id}"
+            if full_url in seen:
+                continue
+            seen.add(full_url)
+            title_lower = slug.replace("-", " ")
+            if any(ex in title_lower for ex in EXCLUDE):
+                continue
+            if not any(rel in title_lower for rel in RELEVANT):
+                continue
+            title = title_lower.strip().title()
+            results.append(normalize_job(
+                "eJobs", job_id, title, "", full_url,
+                "Romania", [kw], "", ""
+            ))
+        time.sleep(1)
+    print(f"  [OK] eJobs: {len(results)} joburi găsite (după filtru strict)")
     return results
 
 # === Main ===
