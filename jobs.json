@@ -1,38 +1,10 @@
 {
-  "last_updated": "2026-11-26T05:06:51.021897+00:00",
+  "last_updated": "2026-11-26T07:01:17.570889+00:00",
   "total_jobs": 9,
   "sources": [
     "eJobs"
   ],
   "jobs": [
-    {
-      "id": "eJobs-99257607",
-      "source": "eJobs",
-      "title": "Coordonator Financiar Contabil Administrativ",
-      "company": "—",
-      "url": "https://www.ejobs.ro/user/locuri-de-munca/coordonator-financiar-contabil-administrativ/99257607",
-      "location": "Romania",
-      "tags": [
-        "constructii"
-      ],
-      "description": "",
-      "posted_at": "2026-11-26T05:06:23.636909+00:00",
-      "scraped_at": "2026-11-26T05:06:23.636914+00:00"
-    },
-    {
-      "id": "eJobs-99257623",
-      "source": "eJobs",
-      "title": "Electromecanic Electronist Service Si Mentenanta Utilaje",
-      "company": "—",
-      "url": "https://www.ejobs.ro/user/locuri-de-munca/electromecanic-electronist-service-si-mentenanta-utilaje/99257623",
-      "location": "Romania",
-      "tags": [
-        "constructii"
-      ],
-      "description": "",
-      "posted_at": "2026-11-26T05:06:23.636886+00:00",
-      "scraped_at": "2026-11-26T05:06:23.636892+00:00"
-    },
     {
       "id": "eJobs-99258295",
       "source": "eJobs",
@@ -41,11 +13,11 @@
       "url": "https://www.ejobs.ro/user/locuri-de-munca/business-development-specialist-proiecte-electrice/99258295",
       "location": "Romania",
       "tags": [
-        "constructii"
+        "AutoCAD"
       ],
       "description": "",
-      "posted_at": "2026-11-26T05:06:23.636823+00:00",
-      "scraped_at": "2026-11-26T05:06:23.636831+00:00"
+      "posted_at": "2026-11-26T07:01:08.307263+00:00",
+      "scraped_at": "2026-11-26T07:01:08.307287+00:00"
     },
     {
       "id": "eJobs-99257856",
@@ -58,8 +30,8 @@
         "constructii"
       ],
       "description": "",
-      "posted_at": "2026-11-26T05:06:23.636729+00:00",
-      "scraped_at": "2026-11-26T05:06:23.636748+00:00"
+      "posted_at": "2026-11-26T07:00:52.410705+00:00",
+      "scraped_at": "2026-11-26T07:00:52.410715+00:00"
     },
     {
       "id": "eJobs-99265018",
@@ -72,8 +44,8 @@
         "constructii"
       ],
       "description": "",
-      "posted_at": "2026-11-26T05:06:23.636670+00:00",
-      "scraped_at": "2026-11-26T05:06:23.636684+00:00"
+      "posted_at": "2026-11-26T07:00:52.410665+00:00",
+      "scraped_at": "2026-11-26T07:00:52.410676+00:00"
     },
     {
       "id": "eJobs-99258309",
@@ -86,8 +58,8 @@
         "constructii"
       ],
       "description": "",
-      "posted_at": "2026-11-26T05:06:23.636561+00:00",
-      "scraped_at": "2026-11-26T05:06:23.636574+00:00"
+      "posted_at": "2026-11-26T07:00:52.410595+00:00",
+      "scraped_at": "2026-11-26T07:00:52.410605+00:00"
     },
     {
       "id": "eJobs-99271552",
@@ -100,8 +72,8 @@
         "constructii"
       ],
       "description": "",
-      "posted_at": "2026-11-26T05:06:23.636457+00:00",
-      "scraped_at": "2026-11-26T05:06:23.636486+00:00"
+      "posted_at": "2026-11-26T07:00:52.410548+00:00",
+      "scraped_at": "2026-11-26T07:00:52.410559+00:00"
     },
     {
       "id": "eJobs-99273372",
@@ -114,8 +86,8 @@
         "constructii"
       ],
       "description": "",
-      "posted_at": "2026-11-26T05:06:23.636274+00:00",
-      "scraped_at": "2026-11-26T05:06:23.636292+00:00"
+      "posted_at": "2026-11-26T07:00:52.410485+00:00",
+      "scraped_at": "2026-11-26T07:00:52.410496+00:00"
     },
     {
       "id": "eJobs-99262334",
@@ -128,8 +100,36 @@
         "constructii"
       ],
       "description": "",
-      "posted_at": "2026-11-26T05:06:23.636182+00:00",
-      "scraped_at": "2026-11-26T05:06:23.636226+00:00"
+      "posted_at": "2026-11-26T07:00:52.410447+00:00",
+      "scraped_at": "2026-11-26T07:00:52.410459+00:00"
+    },
+    {
+      "id": "eJobs-99275237",
+      "source": "eJobs",
+      "title": "Sef Santier Inginer Instalatii Sanitare Si Edilitare",
+      "company": "—",
+      "url": "https://www.ejobs.ro/user/locuri-de-munca/sef-santier-inginer-instalatii-sanitare-si-edilitare/99275237",
+      "location": "Romania",
+      "tags": [
+        "constructii"
+      ],
+      "description": "",
+      "posted_at": "2026-11-26T07:00:52.410316+00:00",
+      "scraped_at": "2026-11-26T07:00:52.410329+00:00"
+    },
+    {
+      "id": "eJobs-99275285",
+      "source": "eJobs",
+      "title": "Mecanic Utilaje Agricole Mechanic Olanda",
+      "company": "—",
+      "url": "https://www.ejobs.ro/user/locuri-de-munca/mecanic-utilaje-agricole-mechanic-olanda/99275285",
+      "location": "Romania",
+      "tags": [
+        "constructii"
+      ],
+      "description": "",
+      "posted_at": "2026-11-26T07:00:52.410165+00:00",
+      "scraped_at": "2026-11-26T07:00:52.410195+00:00"
     }
   ]
 }
