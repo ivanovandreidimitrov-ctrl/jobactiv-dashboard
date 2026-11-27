@@ -1,51 +1,38 @@
 {
-  "last_updated": "2026-11-26T07:01:17.570889+00:00",
+  "last_updated": "2026-11-27T07:01:32.008646+00:00",
   "total_jobs": 9,
   "sources": [
+    "remoteok",
     "eJobs"
   ],
   "jobs": [
     {
-      "id": "eJobs-99258295",
+      "id": "eJobs-99257607",
       "source": "eJobs",
-      "title": "Business Development Specialist Proiecte Electrice",
+      "title": "Coordonator Financiar Contabil Administrativ",
       "company": "—",
-      "url": "https://www.ejobs.ro/user/locuri-de-munca/business-development-specialist-proiecte-electrice/99258295",
-      "location": "Romania",
-      "tags": [
-        "AutoCAD"
-      ],
-      "description": "",
-      "posted_at": "2026-11-26T07:01:08.307263+00:00",
-      "scraped_at": "2026-11-26T07:01:08.307287+00:00"
-    },
-    {
-      "id": "eJobs-99257856",
-      "source": "eJobs",
-      "title": "Mecanic Electromecanic Intretinere Si Reparatii Utilaje",
-      "company": "—",
-      "url": "https://www.ejobs.ro/user/locuri-de-munca/mecanic-electromecanic-intretinere-si-reparatii-utilaje/99257856",
+      "url": "https://www.ejobs.ro/user/locuri-de-munca/coordonator-financiar-contabil-administrativ/99257607",
       "location": "Romania",
       "tags": [
         "constructii"
       ],
       "description": "",
-      "posted_at": "2026-11-26T07:00:52.410705+00:00",
-      "scraped_at": "2026-11-26T07:00:52.410715+00:00"
+      "posted_at": "2026-11-27T07:01:07.330388+00:00",
+      "scraped_at": "2026-11-27T07:01:07.330393+00:00"
     },
     {
-      "id": "eJobs-99265018",
+      "id": "eJobs-99257623",
       "source": "eJobs",
-      "title": "Responsabil Calitate Senior Locatie Oradea",
+      "title": "Electromecanic Electronist Service Si Mentenanta Utilaje",
       "company": "—",
-      "url": "https://www.ejobs.ro/user/locuri-de-munca/responsabil-calitate-senior-locatie-oradea/99265018",
+      "url": "https://www.ejobs.ro/user/locuri-de-munca/electromecanic-electronist-service-si-mentenanta-utilaje/99257623",
       "location": "Romania",
       "tags": [
         "constructii"
       ],
       "description": "",
-      "posted_at": "2026-11-26T07:00:52.410665+00:00",
-      "scraped_at": "2026-11-26T07:00:52.410676+00:00"
+      "posted_at": "2026-11-27T07:01:07.330367+00:00",
+      "scraped_at": "2026-11-27T07:01:07.330373+00:00"
     },
     {
       "id": "eJobs-99258309",
@@ -58,22 +45,36 @@
         "constructii"
       ],
       "description": "",
-      "posted_at": "2026-11-26T07:00:52.410595+00:00",
-      "scraped_at": "2026-11-26T07:00:52.410605+00:00"
+      "posted_at": "2026-11-27T07:01:07.330266+00:00",
+      "scraped_at": "2026-11-27T07:01:07.330273+00:00"
     },
     {
-      "id": "eJobs-99271552",
+      "id": "eJobs-99257856",
       "source": "eJobs",
-      "title": "Tehnician Instalator Sisteme De Inchidere",
+      "title": "Mecanic Electromecanic Intretinere Si Reparatii Utilaje",
       "company": "—",
-      "url": "https://www.ejobs.ro/user/locuri-de-munca/tehnician-instalator-sisteme-de-inchidere/99271552",
+      "url": "https://www.ejobs.ro/user/locuri-de-munca/mecanic-electromecanic-intretinere-si-reparatii-utilaje/99257856",
       "location": "Romania",
       "tags": [
         "constructii"
       ],
       "description": "",
-      "posted_at": "2026-11-26T07:00:52.410548+00:00",
-      "scraped_at": "2026-11-26T07:00:52.410559+00:00"
+      "posted_at": "2026-11-27T07:01:07.330237+00:00",
+      "scraped_at": "2026-11-27T07:01:07.330242+00:00"
+    },
+    {
+      "id": "eJobs-99265018",
+      "source": "eJobs",
+      "title": "Responsabil Calitate Senior Locatie Oradea",
+      "company": "—",
+      "url": "https://www.ejobs.ro/user/locuri-de-munca/responsabil-calitate-senior-locatie-oradea/99265018",
+      "location": "Romania",
+      "tags": [
+        "constructii"
+      ],
+      "description": "",
+      "posted_at": "2026-11-27T07:01:07.330212+00:00",
+      "scraped_at": "2026-11-27T07:01:07.330218+00:00"
     },
     {
       "id": "eJobs-99273372",
@@ -86,8 +87,22 @@
         "constructii"
       ],
       "description": "",
-      "posted_at": "2026-11-26T07:00:52.410485+00:00",
-      "scraped_at": "2026-11-26T07:00:52.410496+00:00"
+      "posted_at": "2026-11-27T07:01:07.330167+00:00",
+      "scraped_at": "2026-11-27T07:01:07.330173+00:00"
+    },
+    {
+      "id": "eJobs-99271552",
+      "source": "eJobs",
+      "title": "Tehnician Instalator Sisteme De Inchidere",
+      "company": "—",
+      "url": "https://www.ejobs.ro/user/locuri-de-munca/tehnician-instalator-sisteme-de-inchidere/99271552",
+      "location": "Romania",
+      "tags": [
+        "constructii"
+      ],
+      "description": "",
+      "posted_at": "2026-11-27T07:01:07.330147+00:00",
+      "scraped_at": "2026-11-27T07:01:07.330153+00:00"
     },
     {
       "id": "eJobs-99262334",
@@ -100,36 +115,22 @@
         "constructii"
       ],
       "description": "",
-      "posted_at": "2026-11-26T07:00:52.410447+00:00",
-      "scraped_at": "2026-11-26T07:00:52.410459+00:00"
+      "posted_at": "2026-11-27T07:01:07.330103+00:00",
+      "scraped_at": "2026-11-27T07:01:07.330125+00:00"
     },
     {
-      "id": "eJobs-99275237",
-      "source": "eJobs",
-      "title": "Sef Santier Inginer Instalatii Sanitare Si Edilitare",
-      "company": "—",
-      "url": "https://www.ejobs.ro/user/locuri-de-munca/sef-santier-inginer-instalatii-sanitare-si-edilitare/99275237",
-      "location": "Romania",
+      "id": "remoteok-1138146",
+      "source": "remoteok",
+      "title": "Creative Director",
+      "company": "Luxury Presence",
+      "url": "https://remoteOK.com/remote-jobs/remote-creative-director-luxury-presence-1138146",
+      "location": "US Only",
       "tags": [
-        "constructii"
+        "marketing"
       ],
-      "description": "",
-      "posted_at": "2026-11-26T07:00:52.410316+00:00",
-      "scraped_at": "2026-11-26T07:00:52.410329+00:00"
-    },
-    {
-      "id": "eJobs-99275285",
-      "source": "eJobs",
-      "title": "Mecanic Utilaje Agricole Mechanic Olanda",
-      "company": "—",
-      "url": "https://www.ejobs.ro/user/locuri-de-munca/mecanic-utilaje-agricole-mechanic-olanda/99275285",
-      "location": "Romania",
-      "tags": [
-        "constructii"
-      ],
-      "description": "",
-      "posted_at": "2026-11-26T07:00:52.410165+00:00",
-      "scraped_at": "2026-11-26T07:00:52.410195+00:00"
+      "description": "<div><span><strong>Luxury Presence </strong>is building the AI growth platform for real estate. Backed by Bessemer Venture Partners and other top investors, we're a Series C company that has hit $100M in annual recurring revenue. More than 100,000 real estate professionals, including over </span><span>30% of the WSJ Real Trends top 100 agents in the United States, use us to run and grow their business.</span></div><div>\n<h2><strong>The Opportunity</strong></h2>\n<p>We build the platform that help",
+      "posted_at": "2026-11-25T14:01:01+00:00",
+      "scraped_at": "2026-11-27T07:00:38.952886+00:00"
     }
   ]
 }
